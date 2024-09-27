@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formularios</title>
+</head>
+<body>
+  <h1>Formularios</h1>
+
+
+  <form>
+
+    <h2>texto</h2>
+
+    <!-- Existen 2 maneras de indicar que la label pertenece a un input: 
+    1. Metiendo el inut dentro de la label
+    2. Indicando el mismo for(label) y id(input) de la etiqueta -->
+    <label for="nombre">Nombre:</label>
+    <input id="nombre" type="text">
+
+    <br>
+    <br>
+
+    <label>
+      Apellido:
+      <input type="text">
+    </label>
+
+    <h2>Email</h2>
+
+    <label>
+      Email:
+      <input type="email">
+    </label>
+
+    <h2>Password</h2>
+
+    <label>
+      Password:
+      <input type="password">
+    </label>
+
+    <h2>Number</h2>
+
+    <label>
+      Edad:
+      <input type="number">
+    </label>
+
+    <h2>Checkbox</h2>
+
+    <h3>Lenguajes preferidos</h3>
+    <label>
+      <input type="checkbox">
+      HTML
+    </label>
+    <label>
+      <input type="checkbox">
+      CSS
+    </label>
+    <label>
+      <input type="checkbox">
+      JavaScript
+    </label>
+
+    <h2>Radio</h2>
+
+    <h3>Género</h3>
+    <label>
+      <input type="radio" name="genero">
+      Masculino
+    </label>
+    <label>
+      <input type="radio" name="genero">
+      Femenino
+    </label>
+    <label>
+      <input type="radio" name="genero">
+      No binario
+    </label>
+
+    <h2>Color</h2>
+
+    <label>
+      Color favorito:
+      <input type="color">
+    </label>
+
+    <h2>Date</h2>
+
+    <label>
+      Fecha cumple:
+      <input type="date">
+    </label>
+
+    <hr>
+
+    <h2>Select</h2>
+
+    <label for="viaje">Viaje:</label>
+    <select id="viaje">
+      <option value="">Selecciona un viaje...</option>
+      <option value="Bali">Bali</option>
+      <option value="Bangkok">Bangkok</option>
+      <option value="Paris">Paris</option>
+      <option value="Indonesia">Indonesia</option>
+    </select>
+
+    <h2>Select multiopción</h2>
+
+    <label for="viajes">Varios Viajes:</label>
+    <select id="viajes" multiple size="5">
+      <option value="">Selecciona un viaje...</option>
+      <option value="Bali">Bali</option>
+      <option value="Bangkok">Bangkok</option>
+      <option value="Paris">Paris</option>
+      <option value="Indonesia">Indonesia</option>
+    </select>
+
+    <h2>Textarea</h2>
+    <label for="message">Mensaje</label>
+    <textarea id="message"></textarea>
+
+
+    <h2>Validaciones en atributos</h2>
+
+    <label for="ciudad">Ciudad</label>
+    <input
+      id="ciudad" 
+      type="text"
+      required
+      minlength="3"
+      maxlength="10"  
+          
+    >
+    <br><br>
+    <label>Edad
+      <input 
+        type="number"
+        min="1"
+        max="120"       
+      >
+
+    </label>
+    <br><br>
+    <label>
+      Email
+      <input type="email"  
+      pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"  
+      title="Introduce un correo electrónico válido. Ejemplo: ejemplo@dominio.com">    </label>
+
+
+    <br><br>
+    <!-- <input type="submit" value="Enviar formulario"> -->
+    <button type="submit">Enviar</button>
+    <!-- <button type="button">No hago nada</button> -->
+  </form>
+  
+  <!-- <button>Fuera tampoco hago nada</button> -->
+  
+</body>
+</html>1

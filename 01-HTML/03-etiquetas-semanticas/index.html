@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Etiquetas semánticas</title>
+</head>
+<body>
+  <header>
+    <h1>Logo.</h1>
+
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Blog</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <!-- 
+    ¿Por qué está estructurado así?
+    Semántica: Las etiquetas como <main>, <section>, <article>, <aside>, y <nav> aportan semántica al documento. Esto facilita que los navegadores, motores de búsqueda y tecnologías asistivas comprendan la estructura del contenido.
+    Accesibilidad: Ayuda a que lectores de pantalla u otros dispositivos de asistencia puedan navegar y comprender el contenido de la página de forma más clara.
+    SEO (Optimización en motores de búsqueda): Los motores de búsqueda pueden interpretar mejor el contenido cuando la página está bien estructurada semánticamente, mejorando la indexación y visibilidad. 
+  -->
+
+  <!-- 
+    Es la etiqueta que envuelve el contenido principal de la página. Representa el contenido más importante del documento.
+    Dentro de <main>, se incluyen las secciones y artículos principales que el usuario debe ver. Es una etiqueta de bloque y solo debe usarse una vez en cada página, ya que representa el contenido central. 
+  -->
+  <main>
+    <section>
+      <h2>Bienvenida</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet porro repudiandae tenetur ea, quae quaerat autem quas repellendus eos fuga, excepturi culpa, nemo saepe tempore est beatae at ratione deleniti?</p>
+    </section>
+  
+    <!-- Representa una sección temática o lógica dentro de la página. Puede agrupar contenido relacionado. -->
+    <section>
+      <h2>Proyectos</h2>
+  
+      <article>
+        <h3>Proyecto 1</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad voluptatum distinctio dolor aliquam rem, illo id qui aliquid, eveniet quibusdam officiis eius ipsum amet, totam possimus doloribus optio libero est.</p>
+      </article>
+  
+  
+      <article>
+        <h3>Proyecto 2</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi nisi expedita repellat quasi beatae obcaecati eius commodi illo, provident aliquam eaque blanditiis quos nemo soluta alias corrupti. Perspiciatis, facere voluptatibus.</p>
+      </article>
+    </section>
+  
+  
+    <!-- Representa contenido lateral, complementario al contenido principal, como una barra lateral o contenido adicional no central. -->
+    <aside>
+      <h2>Sobre mi</h2>
+      <img src="" alt="">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis atque nobis a dolorem odio, temporibus tempora tempore distinctio provident eum ducimus minima quas et similique blanditiis eligendi suscipit iste eveniet.</p>
+  
+  
+    
+      <h2>Links a otras entradas</h2>
+      <nav>
+        <a href="#">Entrada de ayer</a>
+        <a href="#">Entrada de anteayer</a>
+        <a href="#">Entrada del mes pasado</a>
+      </nav>
+    </aside>
+  </main>
+    
+  <footer>
+    <p>Todos los derechos reservados | 2024</p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+/* Extension Better Comments , comentarios de colores*/
+/** CSS = Cascade Style Sheet */
+
+
+
+
+/*! PRIMERA NORMA: Lo que está más abajo gana a lo que está arriba */
+h1 {
+    color: red;
+    color: blue;
+}
+
+h1{
+    color: green;
+}
+
+/*! SEGUNDA NORMA: Lo que es MÁS ESPECÍFICO gana  alo que es MENOS ESPECÍFICO, ej: id's, class, selector */
+/*
+    Niveles de especifidad de menor a mayor:
+    
+    · * (comodin)
+
+    ·etiqueta
+
+    ·.class o [atributos]
+
+    ·#id
+
+    ·style="color:red;"
+
+    !important
+
+    style="color: blue !important;"
+
+*/
+
+/* Juntar Selectores */
+/* Puede haber más de un elemento con la misma clase, pero queremos que afecta a un elemento en concreto, ej: a.class, h3.class */
+.box1{
+    color: tomato;
+}
+
+h3.box1 {
+    color: gold;
+}
