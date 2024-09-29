@@ -1,0 +1,74 @@
+/*? ------------ General settings ------------ */
+
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Young Serif';
+    src: url(../assets/fonts/young-serif/YoungSerif-Regular.ttf);
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Outfit';
+    src: url(../assets/fonts/outfit/Outfit-VariableFont_wght.ttf);
+    font-weight: 400;
+    font-style: normal;
+}
+
+input, button {
+    font: inherit;
+}
+
+img {
+    max-width: 100%;
+}
+
+body {
+    margin: 0;
+    background-color: antiquewhite;
+    font-family: 'Outfit', serif
+}
+
+h1, h2, h3 {
+    font-family: 'Young Serif', serif;
+}
+
+main {
+    background-color: white;
+    width: 35%;
+    margin: auto;
+    /*! Centra imagenes y textos, debe tenerlo el padre!! y va orientado a elementos inline como img, span, inputs*/
+    /* text-align: center; */
+    padding: 35px;
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+/* Class to round elements */
+.rounding-of-elements{
+    border-radius: 15px;
+}
+
+/* TODO */
+hr {
+    background-color: red;
+}
+
+/*? ------------ first section  ------------ */
+.omelette-image img {
+    text-align: center;
+    border-radius: 15px;
+}
+
+
+.omelette-preparation-time {
+    background-color: #fff1f9;
+    padding: 10px;
+}
+
+.section-omelette-nutrition span{
+    padding: 20px;
+}
