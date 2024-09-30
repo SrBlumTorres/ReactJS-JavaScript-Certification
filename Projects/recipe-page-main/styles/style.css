@@ -1,21 +1,22 @@
 /*? ------------ General settings ------------ */
+/* ------- Variables globales -------*/
+
+:root {
+    --white: hsl(0, 0%, 100%);
+    --stone-100: hsl(30, 54%, 90%);
+    --stone-150: hsl(30, 18%, 87%);
+    --stone-600: hsl(30, 10%, 34%);
+    --stone-900: hsl(24, 5%, 18%);
+    --brown-800: hsl(14, 45%, 36%);
+    --rose-800: hsl(332, 51%, 32%);
+    --rose-50: hsl(330, 100%, 98%);
+
+    --heading-font: 'Young Serif', serif;
+    --body-font: 'Outfit', sans-serif;
+}
 
 *, *::after, *::before {
     box-sizing: border-box;
-}
-
-@font-face {
-    font-family: 'Young Serif';
-    src: url(../assets/fonts/young-serif/YoungSerif-Regular.ttf);
-    font-weight: 400;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Outfit';
-    src: url(../assets/fonts/outfit/Outfit-VariableFont_wght.ttf);
-    font-weight: 400;
-    font-style: normal;
 }
 
 input, button {
@@ -23,17 +24,18 @@ input, button {
 }
 
 img {
+    /*? ------ Espacio máximo de su padre ------ */
     max-width: 100%;
 }
 
 body {
     margin: 0;
-    background-color: antiquewhite;
-    font-family: 'Outfit', serif
+    background-color: var(--stone-100);
+    font-family: var(--body-font);
 }
 
-h1, h2, h3 {
-    font-family: 'Young Serif', serif;
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--heading-font);
 }
 
 main {
@@ -52,12 +54,15 @@ main {
     border-radius: 15px;
 }
 
+.section-title{
+    color: var(--brown-800);
+}
+
 /* TODO */
 hr {
     background-color: red;
 }
 
-/*? ------------ first section  ------------ */
 .omelette-image img {
     text-align: center;
     border-radius: 15px;
@@ -71,4 +76,8 @@ hr {
 
 .section-omelette-nutrition span{
     padding: 20px;
+}
+
+.section-omelette-intructions::marker {
+    color: var(--brown-800);
 }
