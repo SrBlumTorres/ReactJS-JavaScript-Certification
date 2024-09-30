@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multimedia</title>
+</head>
+<body>
+  <h1>Multimedia</h1>
+  <h2>Imágenes</h2>
+
+
+  <img src="https://images.pexels.com/photos/104827/cat-pet-animal-domestic-104827.jpeg" alt="Foto de un gato precioso" width="30%">
+  <img src="https://images.pexels.com/photos/104827/cat-pet-animal-domestic-104827.jpeg" alt="Foto de un gato precioso" width="30%">
+  <img src="https://images.pexels.com/photos/104827/cat-pet-animal-domestic-104827.jpeg" alt="Foto de un gato precioso" width="30%">
+
+  <img src="./assets/img/perro1.jpg" alt="Foto de unos perros" width="333" >
+
+
+  <img src="./assets/img/perro1-small.jpg" alt="Foto de unos perros" width="333" >
+
+
+
+  <h2>Vídeos</h2>
+
+
+  <video 
+    src="./assets/video/mar.mp4"
+    width="250"
+    controls
+    autoplay
+    muted
+    loop
+  ></video>
+
+  <video controls width="250">
+    <source src="./assets/video/mar.mp4">
+    <source src="./assets/video/mar.webm">
+    <source src="./assets/video/mar.ogg">
+  </video>
+
+
+  <h2>Audios</h2>
+
+  <audio controls src="./assets/audio/moby.mp3"></audio>
+
+  <audio controls>
+    <source src="./assets/audio/moby.mp3">
+    <source src="./assets/audio/moby.wav">
+  </audio>
+
+  <h2>Picture</h2>
+
+
+  <picture>
+    <source srcset="./assets/img/perro1.webp">
+
+    <img src="./assets/img/perro1.jpg" alt="Foto de unos perros">
+  </picture>
+
+  <picture>
+    <source srcset="./assets/img/perro1.jpg" media="(min-width: 800px)">
+    <source srcset="./assets/img/perro1-small.jpg" media="(min-width: 300px)">
+
+    <img src="./assets/img/perro1.jpg" alt="Foto de unos perros" width="100%">
+  </picture>
+
+
+  <h2>iframes</h2>
+
+  <h3>Youtube</h3>
+
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/yM5UJdaO4is?si=rxqU1q7EPEH4akRa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+  <h3>Google maps</h3>
+
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d95787.17930377029!2d2.035672543359383!3d41.3882189!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a3b369fa8b5b%3A0x7a8065656d2cbe0!2sFundesplai%20-%20Centro%20de%20Formaci%C3%B3n%20Ll%C3%A0stics!5e0!3m2!1ses-419!2ses!4v1727283666123!5m2!1ses-419!2ses" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+
+  <h2>lazy loading</h2>
+  <p>Hacer que las fotos SOLO LAS PIDA SI LAS VAS A VER</p>
+
+  <img loading="lazy" src="./assets/img/perro1.webp" alt="Foto de unos perros" width="300">
+
+
+</body>
+</html>

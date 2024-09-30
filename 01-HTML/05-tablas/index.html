@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tablas</title>
+</head>
+<body>
+  <h1>Tablas</h1>
+
+  <h2>Tabla simple</h2>
+  <table border="1">
+    <caption>Datos básicos</caption>
+
+    <tr>
+      <th>Nombre</th>
+      <th>Apellidos</th>
+      <th>Edad</th>
+    </tr>
+
+    <tr>
+      <td>Ivan</td>
+      <td>Luengo</td>
+      <td>37</td>
+    </tr>
+
+    <tr>
+      <td>Carlos</td>
+      <td>López</td>
+      <td>45</td>
+    </tr>
+  </table>
+
+  <h2>Tabla con celdas expandidas</h2>
+
+  
+
+  <table border="1">
+    <tr>
+      <th>Nombre</th>
+      <th>Apellidos</th>
+      <th>Email</th>
+      <th>Edad</th>
+    </tr>
+    <tr>
+      <td>Ivan</td>
+      <td>Luengo</td>
+      <td>ivle@gmail.com</td>
+      <td>37</td>
+    </tr>
+    <tr>
+      <td>Carlos</td>
+      <td>Lopez</td>
+      <td>clopez@gmail.com</td>
+      <td>45</td>
+    </tr>
+    <tr>
+      <td colspan="3" rowspan="2">Media de edad</td>
+      <td>40</td>
+    </tr>
+
+    <tr>
+      <td>30</td>
+    </tr>
+  </table>
+
+
+  <h2>Tabla con semántica</h2>
+
+  <table border="1">
+    <thead>
+      <tr>
+        <th scope="col">Articulo</th>
+        <th scope="col">Precio</th>
+        <th scope="col">Cantidad</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Raqueta</td>
+        <td>5€</td>
+        <td>2</td>
+      </tr>
+      <tr>
+        <td>Pelota</td>
+        <td>1€</td>
+        <td>10</td>
+      </tr>
+    </tbody>
+   
+
+    <tr>
+      <th scope="row" colspan="2">Total</th>
+      <td>20€</td>
+    </tr>
+  </table>  
+</body>
+</html>
