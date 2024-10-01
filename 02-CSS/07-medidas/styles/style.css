@@ -1,0 +1,77 @@
+.caja {
+  border: 2px solid black;
+  margin-block: 10px;
+}
+
+.caja-px{
+  width: 200px;
+}
+.caja-porcentaje{
+  width: 50%;
+}
+
+.caja-porcentaje div {
+  background-color: gold;
+  width: 30%;
+}
+
+.caja-vw{ /* viewwidth */
+  width: 50vw;
+}
+
+.caja-vw div {
+  background-color: gold;
+  width: 60vw;
+
+}
+
+.caja-vh{
+  height: 10vh; /* viewheight*/
+}
+
+
+
+.caja-rem .p-px {
+  font-size: 24px;
+}
+
+/* html {
+  font-size: 16px;
+} */
+
+.caja-rem .p-rem {
+  font-size: 1.5rem;
+}
+
+.btn {
+  background-color: royalblue;
+  border: none;
+  color: white;
+  border: solid black;
+}
+
+.btn-1 {
+  padding: 5px 8px;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  border-width: 2px;
+}
+
+.btn-2 {
+  padding: 0.5rem 0.7rem;
+  font-size: 1.2rem;
+  border-radius: 0.2rem;
+  border-width: 0.1rem;
+}
+
+.btn-em {
+  font-size: 30px;
+
+  padding: 1em;
+}
+
+
+.caja-ch{
+  font-size: 1.2rem;
+  width: 40ch;
+}

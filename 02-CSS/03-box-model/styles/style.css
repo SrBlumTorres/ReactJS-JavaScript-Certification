@@ -1,0 +1,215 @@
+/* Con box-sizing: border-box;, los 200px de ancho y alto incluyen el padding y el border. Es decir, el tamaño total del elemento permanece igual, sin importar el relleno o borde. */
+
+/* 
+  Beneficios de usar box-sizing: border-box;:
+  -Simplifica el diseño: No tienes que calcular manualmente el tamaño total del elemento si agregas relleno o borde.
+  -Consistencia: Permite que los elementos mantengan el tamaño que especificaste en width y height, independientemente del padding o border. 
+*/
+
+*, *::after, *::before {
+
+  box-sizing: border-box;
+}
+
+input, button {
+  font: inherit;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+}
+
+
+/* display */
+
+.none {
+  display: none;
+}
+
+.inline {
+  display: inline;
+}
+
+/* width y height */
+
+.padre-1 {
+  background-color: gold;
+  /* width: 200px; */
+  /* height: 50px; */
+}
+
+.hijo-1 {
+  background-color: tomato;
+  /* Ancho en base a tu padre */
+  width: 50%;
+  height: 70%;
+}
+
+.container {
+  color: white;
+  background-color: indigo;
+  width: 80%;
+  /* Medida máxima de la caja */
+  max-width: 800px;
+  min-width: 300px;
+}
+
+.link-inline {
+  background-color: tomato;
+  /* Las siguientes configuraciones no son posibles, debido a que los elementos en línea solo ocupan el espacio
+  necesario para su contenido */
+  width: 300px; /*! No te deja*/
+  height: 100px; /*! No te deja*/
+
+  /* Solución para elementos en línea, como input, span, a, etc*/
+
+  /* display: block; */
+}
+
+/* padding */
+
+.caja-padding {
+  background-color: gold;
+
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+
+
+  /* Shorthand */
+
+  padding: 5px;
+  padding: 5px 20px;
+  padding: 5px 10px 20px;
+  padding: 5px 10px 20pºx 0px;
+
+  padding: 10px;
+  padding-bottom: 20px;
+}
+
+.al-reves span {
+  /* margin-inline-start es una propiedad lógica que establece el margen al "inicio" del eje en línea, lo que depende de la dirección del texto (izquierda en LTR, derecha en RTL). */
+  margin-inline-start: 30px;
+}
+
+
+
+/* border */
+.rosa {
+  background-color: hotpink;
+}
+
+.caja-border {
+  border-color: black;
+  border-style: solid;
+  border-style: dotted;
+  border-style: dashed;
+  border-width: 50px;
+
+  border-radius: 10px 20px;
+
+  border: 10px solid indigo;
+}
+
+/* margin */
+
+.caja-margin {
+  background-color: gold;
+  margin-bottom: 20px;
+}
+
+.caja-margin-2 {
+  margin-top: 30px;
+  margin-bottom: 50px;
+  background-color: tomato;
+
+}
+
+.collapse-padre {
+  /* border: 1px solid black; */
+  padding-top: 1px;
+  background-color: gold;
+}
+
+.collapse-hijo {
+  margin-top: 20px;
+}
+
+/* outline */
+
+.caja-outline {
+  /* background-color: tomato; */
+  padding: 5px;
+  border: 2px solid black;
+
+  /* El contorno es una línea que se dibuja fuera del borde del elemento y no afecta el tamaño del contenido o el espacio reservado por el elemento (a diferencia de border). */
+  outline: 3px solid red;
+  outline-offset: 0px;
+}
+
+/* box-sizing */
+
+.caja-sizing-1 {
+  background-color: gold;
+  width: 200px;
+  border: 2px solid black;
+  padding: 5px;
+  margin-bottom: 5px;
+
+  box-sizing: content-box;
+}
+.caja-sizing-2 {
+  width: 200px;
+  border: 2px solid black;
+  padding: 5px;
+  margin-bottom: 5px;
+  background-color: royalblue;
+
+  box-sizing: border-box;
+}
+
+
+
+/* overflow */
+
+.caja-overflow {
+  border: 3px solid black;
+  padding: 5px;
+  height: 90px;
+
+  /* Scroll dentro de un div, una box con info por ejemplo */
+  overflow-y: scroll;
+  overflow-y: auto;
+  overflow-y: hidden;
+    
+}
+
+
+
+/* truco para centrar */
+
+.centrar-1{
+  border: 2px solid black;
+  text-align: center;
+}
+
+.centrar-1 span {
+  background-color: tomato;
+}
+
+.center-2 {
+  margin-top: 20px;
+  border: 2px solid black;
+  text-align: center;
+}
+
+.center-2 div {
+  background-color: gold;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  
+  margin-inline: auto; 
+}
+

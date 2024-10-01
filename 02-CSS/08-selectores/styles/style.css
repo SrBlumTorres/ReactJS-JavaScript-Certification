@@ -1,0 +1,391 @@
+
+/** etiqueta */
+
+p {
+
+}
+
+summary {
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+summary::marker {
+  color: red;
+  font-size: 1.5rem;
+  content: '👉';
+}
+
+details[open] > summary::marker {
+  content: '👇';
+}
+
+/** class */
+.caja {
+
+}
+
+/** id */
+
+#titulo {
+
+}
+
+/** atributo */
+[class] { }
+[type="email"] { }
+[data-id="1234"] { }
+
+[data-city] {
+  color: crimson;
+}
+
+[data-city="Barcelona"] {
+  text-decoration: underline;
+}
+
+[data-city^="S"] {
+  background-color: gold;
+}
+
+[data-city$="a"] {
+  letter-spacing: 5px;
+}
+
+[data-city*="ll"] {
+  font-style: italic;
+}
+
+
+/*? combinación de selectores */
+
+
+/** Aumentar especificidad de un elemento úncio  */
+
+h2 {
+  padding: 0.5rem;
+}
+
+h2.titulo {
+  padding: 1rem;
+}
+
+h2.titulo[title] {}
+
+
+/** Hermanos adyacentes (que toca)  + */
+
+h2 + p {
+  font-size: 1.3rem;
+}
+
+/** Hermanos generales (que se tocan o no)     ~   */
+
+/*
+  Virgulilla
+  Alt Gr + 4  (2 veces)
+  MacOS ==> option + Ñ  
+*/
+
+h2 ~ p {
+  color: blue;
+}
+
+
+
+/** selector de hijo directo    >   */
+
+.lista-1 > li {
+  border: 2px solid crimson;
+}
+
+/** selector descendientes (para hijos, nietos, etc)  <espacio> */
+
+.lista-2 li {
+  border: 2px solid indigo;
+}
+
+
+/* Esto puede ser todo lo largo y específico que quieras*/
+
+body div.caja > p.parrafo-1 span.azul {
+  color: blue;
+}
+
+/**************************/
+
+/*? Pseudoclases ==> Cambios de estado de un elemento  */
+/* al hacer hover, cuando haces click, cuando haces foco, etc */
+
+
+.btn-1 {
+  background-color: hsl(275, 100%, 25%);
+  padding: 0.3rem 0.5rem;
+  border: none;
+  border-radius: 0.2rem;
+  color: white;
+  font-size: 1.3rem;
+}
+
+/*! OJO. No useis borders al hacer cambios de estado, utilizad outline  */
+/** hover ==> al pasar por encima  */
+.btn-1:hover {
+  background-color: hsl(275, 100%, 35%);
+  outline: 2px solid black;
+}
+
+
+/** active  ==> mientras haces click */
+.btn-1:active {
+  background-color: hsl(275, 100%, 60%);
+}
+
+/** focus  ==> cuando hacemos foco en un elemento con el raton o con el tabulador */
+
+.btn-1:focus {
+  outline: 3px solid crimson;
+}
+
+.input-1 {
+  outline: none;
+}
+
+.input-1:focus {
+  border-bottom: 5px solid lightseagreen;
+}
+
+
+/** focus-visible  ==> cuando hacemos foco en un elemento SOLO CON EL TABULADOR */
+
+.btn-1:focus-visible {
+  color: crimson;
+}
+
+
+/*? Pseudoclases => por posición y otras cosas  */
+
+table, td, th {
+  border: 2px solid black;
+  border-collapse: collapse;
+}
+
+
+table {
+  text-align: center;
+  margin-block: 1rem;
+}
+
+.table-1 tr:first-child {
+  background-color: rgba(0, 0, 255, 0.247);
+}
+
+
+.table-1 tr:last-child {
+  background-color: rgba(0, 0, 255, 0.247);
+}
+
+/*! Recuerda que first child indica que sea PRIMER HIJO DE "ALGO" no necesariamente de .table-1  */
+.table-1 td:first-child {
+  color: crimson;
+}
+
+/** nth-child() ==> Para seleccionar un número de hijo concreto  */
+
+
+.table-2 tr:nth-child(3) {
+  background-color: rgba(32, 178, 171, 0.434);
+}
+
+.table-2 tr:nth-child(6) {
+  background-color: rgba(178, 39, 32, 0.234);
+}
+
+
+/** Podemos usar las palabras even (pares) y odd (impares) para estilizar hijos */
+
+
+/* .table-3 tr:nth-child(even) { */
+.table-3 tr:nth-child(odd) {
+  background-color: rgba(32, 178, 64, 0.234);
+}
+
+/** También podemos usar una ecuación matemática */
+
+/* .table-4 tr:nth-child(4n) { */
+.table-4 tr:nth-child(2n + 5) {
+  background-color: rgb(32, 178, 64, 0.234);
+}
+
+
+/** .not ==>  dar estilos a algo EXCEPTO (una condicion) */
+
+.table-not tr:nth-child(even):not(.especial) {
+  background-color: crimson;
+}
+
+.menu a {
+  border: 1px solid crimson;
+  padding: 0.3rem 0.5rem;
+}
+
+.menu a:not(:first-child) {
+  margin-left: 1rem;
+}
+
+/** :has() ==> Por primera vez podemos estilizar a un padre dependiendo de un hijo  */
+
+.padre-1 {
+  margin-block: 1rem;
+  border: 2px solid crimson;
+  display: inline-block; 
+  padding: 1rem;
+}
+
+.padre-1:hover > .hijo {
+  background-color: gold;
+} 
+
+.padre-1:hover + p {
+  outline: 2px solid indigo;
+}
+
+
+
+
+.padre-2 {
+  border: 2px solid crimson;
+  display: inline-block;
+  padding: 1rem;
+}
+
+.padre-2:has(input:checked) {
+  border-color: lightseagreen;
+}
+
+body:has(input.dark-mode:checked) {
+  background-color: lightslategray;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*? pseudoselectores  ==> para dar estilos a cosas que son CASI ETIQUETAS HTML pero que no existen  */
+
+/** ::selection  => estilizar cuando seleccionamos texto  */
+
+
+.selection::selection {
+  background-color: crimson;
+  color: white;
+}
+
+/** ::first-letter  ==>  Primera letra   */
+.primera-letra::first-letter {
+  color: crimson;
+  font-size: 2rem;
+}
+
+.primera-linea::first-line {
+  color: crimson;
+}
+
+/** ::placeholder  */
+
+.input-2::placeholder {
+  color: lightblue;
+}
+
+
+/** ::marker  ==> el triangulito de un details o los puntos de una lista  */
+
+.details-1 summary::marker {
+  color: crimson;
+  content: '↦';
+}
+
+
+
+.lista-3 li::marker {
+  color: lightseagreen;
+  font-size: 1.2rem;
+  content: 'hola';
+  content: url(https://picsum.photos/id/237/16);
+  content: attr(data-icon);
+}
+
+
+
+
+
+/* Si quieres cambiar alguno de estos en forma GLOBAL para todos úsalo sin nada */
+
+::placeholder {
+  color: blue;
+}
+
+::selection {}
+
+/* :focus {
+  outline: 6px solid gold;
+} */
+
+
+
+/** Truquito con checkbox  */
+
+.toggle {
+  display: none;
+}
+
+.toggle:checked + label > .icon{
+  color: crimson;
+}
+
+
+.icon {
+  color: rebeccapurple;
+  font-size: 5rem;
+}
+
+
+
+/** ::before y ::after  */
+
+.titulo-cool {
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+}
+
+.before, .after {
+  color: crimson;
+}
+
+
+/* ahora de verdad de la buena */
+
+.titulo-cool-cool {
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+}
+
+.titulo-cool-cool::before {
+  content: attr(data-icon);
+  /* display: block; */
+  color: crimson;
+  margin-right: 0.5rem;
+}
+
+.titulo-cool-cool::after {
+  content: attr(data-icon);
+  margin-left: 0.5rem;
+  /* display: block; */
+  color:crimson;
+}

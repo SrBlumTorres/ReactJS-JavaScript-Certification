@@ -1,0 +1,45 @@
+body {
+  font-family: 'Arial';
+}
+
+/** https://www.w3schools.com/cssref/css_colors.php */
+.nombre {
+  color:orangered;
+}
+
+
+.rgb {
+  color: rgb(255 0 0);
+  color: rgb(0 255 0);
+  color: rgb(0 0 255);
+  color: rgb(255, 183, 0);
+}
+
+.rgb-trans {
+  color: rgba(255, 0, 0, 0.3);
+  color: rgb(255, 0, 0, 0.3);
+  color: rgb(255 0 0 / 0.3);
+}
+
+
+/* 0 1 2 3 4 5 6 7 8 9 A B C D E F */
+
+.hex {
+  color: #ff0000;
+}
+
+.hex-trans {
+  color: #ff00ff30;
+}
+
+/* h = hue (tono)  s = saturation   l = luminosity */
+/* De preferencia escoger siempre hsl */
+.hsl {
+  color: hsl(170 100% 50%);
+}
+
+.hsl-trans {
+  color: hsla(170 100% 50%);
+  color: hsl(170, 100%, 50%, 0.3);
+  color: hsl(170 100% 50% / 0.3);
+}

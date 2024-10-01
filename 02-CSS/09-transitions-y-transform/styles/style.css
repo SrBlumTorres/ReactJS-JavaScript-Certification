@@ -1,0 +1,109 @@
+.btn {
+  background-color: hsl(270, 50%, 40%);
+  font-size: 2rem;
+  padding: 0.3rem 0.5rem;
+  color: white;
+  border: none;
+  border-radius: 0.3rem;
+  outline: 1px solid gold;
+}
+
+.btn-1 {
+
+  transition-property: background-color;
+  transition-duration: 3s;
+  /* transition-delay: 2s; */
+
+  transition-timing-function: linear;
+  transition-timing-function: ease-in;
+  transition-timing-function: ease-out;
+  transition-timing-function: ease-in-out;
+  transition-timing-function: ease;
+
+  /* shorthand */
+  transition: background-color 1s ease;
+  transition: outline 1s ease;
+
+  transition: background-color 2s ease, outline 1s 2s ease;
+}
+
+.btn-1:hover {
+  background-color: hsl(270, 50%, 70%);
+}
+
+
+.btn-1:active {
+  outline-width: 10px;
+}
+
+
+/*? Transforms  */
+
+.caja {
+  text-align: center;
+  margin-block: 1rem;
+  width: 70px;
+  height: 70px;
+  background-color: gold;
+  border: 2px solid black;
+}
+
+
+.translate {
+  transform: translate(50px, 50px);
+  translate: 60px -50px;
+}
+
+.rotate {
+  transform: perspective(500px) rotateZ(-45deg);
+  transform: perspective(500px);
+
+  rotate: y 50deg;
+}
+
+.scale {
+  /*  1 es lo normal, por debajo se hace pequeño y por encima se hace grande */
+  /* transform: scale(1); */
+  /* transform: scale(0.5); */
+  /* transform: scale(1.5); */
+
+  scale: 1.5;
+}
+
+.btn-2 {
+  margin-top: 2rem;
+  transition: scale 0.5s ease, rotate 2s ease;
+}
+
+.btn-2:hover {
+  /* transform: scale(1.1) rotate(10deg); */
+
+  scale: 1.1;
+  rotate: 10deg;
+}
+
+
+
+.foto-1 {
+  filter: grayscale(1);
+  transition: filter 1s ease;
+}
+
+.foto-1:hover {
+  filter: grayscale(0);
+}
+
+.foto-2 {
+  filter: blur(3px);
+  transition: filter 1s ease;
+}
+
+.foto-2:hover {
+  filter: blur(0);
+}
+
+.foto-3 {
+  width: 100px;
+  /* box-shadow: 5px 5px 5px 0px crimson; */
+  filter: drop-shadow(5px 5px 5px blue);
+}

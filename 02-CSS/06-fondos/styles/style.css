@@ -1,0 +1,61 @@
+body {
+  font-family: 'Arial', sans-serif;
+}
+
+.caja {
+  border: 2px solid black;
+  /* width: 25%; */
+  height: 200px;
+  margin-block: 50px;
+}
+
+.caja-image {
+  background-color: pink;
+
+  background-image: url('https://picsum.photos/id/237/300');
+  background-repeat: repeat-x; 
+  background-repeat: repeat-y; 
+  background-repeat: repeat; /** por defecto */
+  background-repeat: no-repeat;
+  
+  background-size: 50px;
+  background-size: 10%;
+  background-size: contain;
+  background-size: cover;
+
+  background-position: top left;
+  background-position: top right;
+  background-position: center center;
+  background-position: center;
+
+
+  /* shorthand */
+  background: pink url('https://picsum.photos/id/237/300') no-repeat center center / cover;
+}
+
+
+.caja-gradient {
+  /* background-image: Esta propiedad se utiliza para definir una imagen de fondo para un elemento. En este caso, la imagen de fondo es un degradado lineal. */
+  /* Es una función que genera un degradado lineal entre los colores especificados. */
+  /* 135deg: Define la dirección del degradado. En este caso, el ángulo de 135 grados */
+  background-image: linear-gradient(royalblue, crimson);
+  background-image: linear-gradient(to right, royalblue, crimson);
+  background-image: linear-gradient(to left, royalblue, crimson);
+  background-image: linear-gradient(135deg, royalblue, crimson);
+  background-image: linear-gradient(135deg, rgba(65, 105, 225, 0.438), rgba(220, 20, 60, 0.438), rgba(255, 217, 0, 0.447));
+}
+
+
+
+.caja-gradient-truco {
+  height: auto;
+  text-align: center;
+  padding: 20px;
+
+  background-image: linear-gradient(135deg, rgba(255, 0, 0, 0.406), rgba(0, 0, 255, 0.434)), url('https://picsum.photos/id/43/300');
+
+  background-image: linear-gradient(135deg, rgba(0, 0, 0, 0.406), rgba(0, 0, 0, 0.434)), url('https://picsum.photos/id/43/300');
+  background-size: cover;
+  background-position: center;
+  color:white;
+}

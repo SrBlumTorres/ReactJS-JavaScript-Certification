@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles/style.css">
+  <script src="https://kit.fontawesome.com/dbd7d68ddb.js" crossorigin="anonymous"></script>
+  <title>Selectores en CSS</title>
+</head>
+
+<body>
+  <h1 class="" title="" id="">Selectores en CSS</h1>
+
+  <details>
+    <summary>Selectores y combinación de selectores</summary>
+    <h2 data-city="Barcelona">Barcelona</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum neque veniam repellendus eum dolorem quis fugiat
+      nesciunt suscipit, porro dolor velit labore expedita vitae ipsam eaque aliquam saepe assumenda corporis.</p>
+    <h2 data-city="Sevilla">Sevilla</h2>
+    <h2 data-city="Sabadell">Sabadell</h2>
+
+    <h3>Título 3</h3>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione nemo nostrum nihil voluptatibus neque fugiat
+      consectetur perspiciatis distinctio nisi, eius animi, provident dicta voluptate iusto placeat temporibus fugit
+      numquam obcaecati!</p>
+    <h2>Titulo 2</h2>
+    <ul class="lista-1">
+      <li>Item 1</li>
+      <li>Item 2
+        <ul>
+          <li>Subitem 1</li>
+          <li>Subitem 2</li>
+          <li>Subitem 3</li>
+          <li>Subitem 4</li>
+        </ul>
+      </li>
+      <li>Item 3</li>
+      <li>Item 4</li>
+    </ul>
+    <ul class="lista-2">
+      <li>Item 1</li>
+      <li>Item 2
+        <ul>
+          <li>Subitem 1</li>
+          <li>Subitem 2</li>
+          <li>Subitem 3</li>
+          <li>Subitem 4</li>
+        </ul>
+      </li>
+      <li>Item 3</li>
+      <li>Item 4</li>
+    </ul>
+  </details>
+
+
+  <details>
+    <summary>Pseudoclases</summary>
+    <button class="btn btn-1">Haz Click</button>
+    <input class="input-1" type="text" placeholder="Apellido...">
+    <h2>first-child y last-child</h2>
+    <table class="table-1">
+      <tr>
+        <th>Número</th>
+      </tr>
+      <tr>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>2</td>
+      </tr>
+      <tr>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>4</td>
+      </tr>
+      <tr>
+        <td>5</td>
+      </tr>
+    </table>
+    <table class="table-2">
+      <tr>
+        <th>Número</th>
+      </tr>
+      <tr>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>2</td>
+      </tr>
+      <tr>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>4</td>
+      </tr>
+      <tr>
+        <td>5</td>
+      </tr>
+    </table>
+    <table class="table-3">
+      <tr>
+        <th>Número</th>
+      </tr>
+      <tr>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>2</td>
+      </tr>
+      <tr>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>4</td>
+      </tr>
+      <tr>
+        <td>5</td>
+      </tr>
+    </table>
+    <table class="table-4">
+      <tr>
+        <th>Número</th>
+      </tr>
+      <tr>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>2</td>
+      </tr>
+      <tr>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>4</td>
+      </tr>
+      <tr>
+        <td>5</td>
+      </tr>
+      <tr>
+        <td>6</td>
+      </tr>
+      <tr>
+        <td>7</td>
+      </tr>
+      <tr>
+        <td>8</td>
+      </tr>
+      <tr>
+        <td>8</td>
+      </tr>
+      <tr>
+        <td>8</td>
+      </tr>
+      <tr>
+        <td>8</td>
+      </tr>
+      <tr>
+        <td>8</td>
+      </tr>
+      <tr>
+        <td>8</td>
+      </tr>
+      <tr>
+        <td>8</td>
+      </tr>
+      <tr>
+        <td>8</td>
+      </tr>
+      <tr>
+        <td>8</td>
+      </tr>
+      <tr>
+        <td>8</td>
+      </tr>
+      <tr>
+        <td>8</td>
+      </tr>
+      <tr>
+        <td>8</td>
+      </tr>
+      <tr>
+        <td>8</td>
+      </tr>
+      <tr>
+        <td>8</td>
+      </tr>
+    </table>
+    <h2>.not</h2>
+    <table class="table-not">
+      <tr>
+        <th>Número</th>
+      </tr>
+      <tr>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>2</td>
+      </tr>
+      <tr>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>4</td>
+      </tr>
+      <tr class="especial">
+        <td>5</td>
+      </tr>
+      <tr>
+        <td>6</td>
+      </tr>
+      <tr>
+        <td>7</td>
+      </tr>
+      <tr>
+        <td>8</td>
+      </tr>
+    </table>
+    <nav class="menu">
+      <a href="#">Home</a><a href="#">About</a><a href="#">Blog</a><a href="#">Contact</a>
+    </nav>
+    <h2>:has</h2>
+    <div class="padre-1">
+      <div class="hijo">Hijo</div>
+    </div>
+    <p>Párrafo debajo del padre</p>
+    <div class="padre-2">
+      <input type="checkbox">
+    </div>
+    <input type="checkbox" class="dark-mode">
+    <!-- div h2:first-of-type  -->
+    <div>
+      <p>1</p>
+      <h2>1</h2>
+      <p>2</p>
+      <h2>2</h2>
+      <p>3</p>
+      <h2>3</h2>
+      <p>4</p>
+    </div>
+  </details>
+
+
+
+
+
+  <details>
+    <summary>Pseudoselectores</summary>
+
+    <h3 class="selection">::selection</h3>
+
+    <p class="primera-letra">First letter Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus
+      distinctio praesentium nobis blanditiis consequuntur atque aspernatur enim perferendis aliquam voluptate, maxime
+      aut suscipit vel temporibus neque possimus illo. Placeat, aut.</p>
+    <p class="primera-linea">First line Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus distinctio
+      praesentium nobis blanditiis consequuntur atque aspernatur enim perferendis aliquam voluptate, maxime aut suscipit
+      vel temporibus neque possimus illo. Placeat, aut.</p>
+
+    <h3>placeholder</h3>
+
+    <input class="input-2" type="text" placeholder="Nombre...">
+
+    <h3>::marker</h3>
+
+
+    <details class="details-1">
+      <summary>Hola</summary>
+    </details>
+
+    <ul class="lista-3">
+      <li data-icon="🥹">Item 1</li>
+      <li data-icon="🤘">Item 2</li>
+      <li data-icon="🥸">Item 3</li>
+      <li data-icon="🐶">Item 4</li>
+    </ul>
+  </details>
+
+
+
+
+  <details>
+    <summary>Truquito con un checkbox</summary>
+
+
+    <input id="truco" class="toggle" type="checkbox">
+    <label for="truco">
+      <i class="icon fa-solid fa-bars"></i>
+    </label>
+
+  </details>
+
+  <details open>
+    <summary>::before y ::after</summary>
+
+
+    <h2 class="titulo-cool">
+      <span class="before">-</span>
+      Título supercool
+      <span class="after">-</span>
+    </h2>
+
+    <h2 class="titulo-cool-cool" data-icon="-">Título supercool cool</h2>
+
+
+    <h3 class="titulo-cool-cool" data-icon="🤘">H3 megacool</h3>
+
+
+ 
+
+
+
+  </details>
+
+
+
+</body>
+
+</html>
