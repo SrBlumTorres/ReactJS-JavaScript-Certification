@@ -13,18 +13,26 @@ body {
   background-color: pink;
 
   background-image: url('https://picsum.photos/id/237/300');
-  background-repeat: repeat-x; 
+  /* Repite la imagen hacia x (horizontal) */
+  background-repeat: repeat-x;
+  /* Repite la imagen hacia y (vertical) */
   background-repeat: repeat-y; 
   background-repeat: repeat; /** por defecto */
+  /* No repite la imagen */
   background-repeat: no-repeat;
   
+  /* Tamaño de la imagen*/
   background-size: 50px;
   background-size: 10%;
   background-size: contain;
+  /* Cubrir el elemento entero */
   background-size: cover;
 
+  /* Posición de la imagen */
+  /* Arriba a la izquierda */
   background-position: top left;
   background-position: top right;
+  /* En medio de manera vertical y horizontal */
   background-position: center center;
   background-position: center;
 
@@ -55,6 +63,7 @@ body {
   background-image: linear-gradient(135deg, rgba(255, 0, 0, 0.406), rgba(0, 0, 255, 0.434)), url('https://picsum.photos/id/43/300');
 
   background-image: linear-gradient(135deg, rgba(0, 0, 0, 0.406), rgba(0, 0, 0, 0.434)), url('https://picsum.photos/id/43/300');
+  /* El background cubrirá todo */
   background-size: cover;
   background-position: center;
   color:white;

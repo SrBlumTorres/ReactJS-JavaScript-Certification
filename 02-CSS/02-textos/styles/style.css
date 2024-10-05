@@ -1,1 +1,94 @@
 
+
+.popurri {
+  font-family: 'Times New Roman', serif;
+  font-family: 'Arial', sans-serif;
+  font-family: 'Courier New', monospace;
+
+  font-size: 16px; /* por defecto */
+  font-size: 24px;
+
+
+  font-weight: normal;
+  font-weight: bold;
+
+
+  font-style: italic;
+  font-style: normal;
+
+
+  /* Diferentes transformaciones del contenido */
+  /* Todo a minúsculas */
+  text-transform: lowercase;
+  /* Todo a mayúsculas */
+  text-transform: uppercase;
+  /* Cada palabra empieza en mayúsculas */
+  text-transform: capitalize;
+
+  text-decoration: none;
+  /* Subrallado */
+  text-decoration: underline;
+  /* Texto tachado */
+  text-decoration: line-through;
+  text-decoration: underline red;
+  text-decoration: underline red dotted;
+  text-decoration: underline red dashed;
+  /* Subrallado  */
+  text-decoration: underline red double;
+}
+
+/* Alineación del texto  */
+.left {
+  text-align: left;
+}
+
+.right {
+  text-align: right;
+}
+
+.center {
+  text-align: center;
+}
+
+/* Justificación del texto */
+.justify {
+  text-align: justify;
+}
+
+/* Balanceamos el texto, para que ocupen lo mismo línea a línea */
+.balance-title {
+  text-wrap: balance;
+}
+
+.balance-p {
+  text-wrap: pretty;
+}
+
+
+.fuente-google {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+  font-weight: 900;
+}
+
+
+.fuente-descargada {
+  font-family: 'Jedi', sans-serif;
+}
+
+
+
+.fuente-descargada-2 {
+  font-family: 'Taviraj', serif;
+  font-style: italic;
+}
+
+
+
+.fuente-variable {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: normal;
+  font-weight: 100;
+  font-weight: 900;
+  font-weight: 785;
+}

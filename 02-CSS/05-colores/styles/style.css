@@ -15,6 +15,7 @@ body {
   color: rgb(255, 183, 0);
 }
 
+/* Colores con opacidad */
 .rgb-trans {
   color: rgba(255, 0, 0, 0.3);
   color: rgb(255, 0, 0, 0.3);
@@ -28,6 +29,7 @@ body {
   color: #ff0000;
 }
 
+/* Hexadecimal con opacidad */
 .hex-trans {
   color: #ff00ff30;
 }
@@ -38,6 +40,7 @@ body {
   color: hsl(170 100% 50%);
 }
 
+/* hsla(hue, saturation, lightness, alpha) con opacidad */
 .hsl-trans {
   color: hsla(170 100% 50%);
   color: hsl(170, 100%, 50%, 0.3);

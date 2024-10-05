@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles/reset.css">
+  <link rel="stylesheet" href="./styles/style.css">
+  <title>Display Flex</title>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Display Flex</h1>
+
+    <h2>Propiedades al padre</h2>
+
+    <details>
+      <summary>Básico</summary>
+      
+        <div class="padre padre-1">
+          <div class="hijo hijo-1">1</div>
+          <div style="font-size: 2rem;" class="hijo hijo-2">2</div>
+          <div class="hijo hijo-3">3</div>
+          <div class="hijo hijo-4">4</div>
+        </div>
+        <header class="header-desktop">
+          <h1>logo.</h1>
+          <nav>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Blog</a>
+            <a href="#">Contact</a>
+          </nav>
+        </header>
+        <header class="header-mobile">
+          <h1>logo.</h1>
+          <nav>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Blog</a>
+            <a href="#">Contact</a>
+          </nav>
+        </header>
+    </details>
+
+    <details>
+      <summary>Varias filas</summary>
+      
+        <div class="padre padre-2">
+          <div class="hijo hijo-1">1</div>
+          <div class="hijo hijo-2">2</div>
+          <div class="hijo hijo-3">3</div>
+          <div class="hijo hijo-4">4</div>
+          <div class="hijo hijo-5">5</div>
+        </div>
+      
+    </details>
+
+
+    <h2>Propiedades a los hijos<h2>
+
+    <details>
+      <summary>Cambiar la posición de los hijos 👉 .order</summary>
+      
+        <div class="padre padre-3">
+          <div class="hijo hijo-1">1</div>
+          <div class="hijo hijo-2">2</div>
+          <div class="hijo hijo-3">3</div>
+          <div class="hijo hijo-4">4</div>      
+        </div>
+      
+    </details>
+
+
+    <details>
+      <summary>Permitir que los hijos se expandan 👉 .flex-grow</summary>
+      
+        <div class="padre padre-4">
+          <div class="hijo hijo-1">1</div>
+          <div class="hijo hijo-2">2</div>
+          <div class="hijo hijo-3">3</div>
+          <div class="hijo hijo-4">4</div>      
+        </div>
+      
+    </details>
+
+    <details>
+      <summary>Permitir que los hijos se compriman 👉 .flex-shrink</summary>
+      
+        <div class="padre padre-5">
+          <div class="hijo hijo-1">1</div>
+          <div class="hijo hijo-2">2</div>
+          <div class="hijo hijo-3">3</div>
+          <div class="hijo hijo-4">4</div>      
+        </div>
+      
+    </details>
+
+
+    <details >
+      <summary>Ancho y alto de una caja 👉 .flex-basis</summary>
+      
+        <div class="padre padre-6">
+          <div class="hijo hijo-1">1</div>
+          <div class="hijo hijo-2">2</div>
+          <div class="hijo hijo-3">3</div>
+          <div class="hijo hijo-4">4</div>      
+        </div>
+      
+    </details>
+
+
+
+    <details>
+      <summary>Alinear UNA CAJA SOLA 👉 .align-self</summary>
+      
+        <div class="padre padre-7">
+          <div class="hijo hijo-1">1</div>
+          <div class="hijo hijo-2">2</div>
+          <div class="hijo hijo-3">3</div>
+          <div class="hijo hijo-4">4</div>      
+        </div>
+      
+    </details>
+
+
+
+    <details open>
+      <summary>Truquito para mover cajas de punta a punta 👉 margin: auto;</summary>
+      
+        <div class="padre padre-8">
+          <!-- <div style="display: flex; align-items: center">
+            <div class="hijo hijo-1">1</div>
+            <div class="hijo hijo-2">2</div>
+          </div>
+
+
+          <div>
+            <div class="hijo hijo-3">3</div>
+            <div class="hijo hijo-4">4</div>
+            <div class="hijo hijo-5">5</div>
+          </div>      -->
+          <div class="hijo hijo-1">1</div>
+          <div class="hijo hijo-2">2</div>
+          <!-- <div style="flex-grow: 1"></div> -->
+          <div class="hijo hijo-3">3</div>
+          <div class="hijo hijo-4">4</div>
+          <div class="hijo hijo-5">5</div>
+        </div>
+      
+    </details>
+
+
+    <div class="float" style="border: 2px solid crimson;">
+      <img style="float: right;" src="https://picsum.photos/id/47/200" alt="">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente officiis ullam aperiam mollitia maxime tempora provident qui corporis non, vitae nisi dolorum odit optio molestiae.</p>
+    </div>
+  </div>
+
+
+  
+</body>
+</html>

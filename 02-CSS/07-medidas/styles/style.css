@@ -6,6 +6,7 @@
 .caja-px{
   width: 200px;
 }
+
 .caja-porcentaje{
   width: 50%;
 }
@@ -15,7 +16,8 @@
   width: 30%;
 }
 
-.caja-vw{ /* viewwidth */
+/* viewwidth */
+.caja-vw { 
   width: 50vw;
 }
 
@@ -25,8 +27,9 @@
 
 }
 
+/* viewheight*/
 .caja-vh{
-  height: 10vh; /* viewheight*/
+  height: 10vh; 
 }
 
 

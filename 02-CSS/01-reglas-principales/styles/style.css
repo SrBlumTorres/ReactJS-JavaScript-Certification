@@ -1,9 +1,6 @@
 /* Extension Better Comments , comentarios de colores*/
 /** CSS = Cascade Style Sheet */
 
-
-
-
 /*! PRIMERA NORMA: Lo que está más abajo gana a lo que está arriba */
 h1 {
     color: red;
@@ -36,6 +33,7 @@ h1{
 
 /* Juntar Selectores */
 /* Puede haber más de un elemento con la misma clase, pero queremos que afecta a un elemento en concreto, ej: a.class, h3.class */
+
 .box1{
     color: tomato;
 }

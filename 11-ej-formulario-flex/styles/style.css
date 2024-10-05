@@ -1,0 +1,50 @@
+:root {
+    --lima: hsl(61, 70%, 52%);
+    --rojo: hsl(4, 69%, 50%);
+    --blanco: hsl(0, 0%, 100%);
+    --Slate-100: hsl(202, 86%, 94%);
+    --Slate-300: hsl(203, 41%, 72%);
+    --Slate-500: hsl(200, 26%, 54%);
+    --Slate-700: hsl(200, 24%, 40%);
+    --Slate-900: hsl(202, 55%, 16%);
+
+    /* --heading-font: 'Young Serif', serif;
+    --body-font: 'Outfit', sans-serif; */
+}
+
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+input, button {
+    font: inherit;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    display: flex;                /* Activa flexbox en el body */
+    justify-content: center;       /* Centra horizontalmente */
+    align-items: center;           /* Centra verticalmente */
+    background-color: var(--Slate-100);
+}
+
+/* Formulario */
+.container {
+    background-color: var(--blanco);
+    width: 75%;
+    display: flex;
+    justify-content: space-between; /* Para distribuir el contenido dentro del container */
+    align-items: flex-start;        /* Alinea el contenido del container en la parte superior */
+    padding: 20px;                  /* Añade espacio alrededor del container */
+}
+
+.mortgage-calculator {
+    background-color: var(--blanco);
+    width: 50%;
+}
+
+.mortgage-your-results {
+    background-color: var(--Slate-900);
+    width: 50%;
+}
