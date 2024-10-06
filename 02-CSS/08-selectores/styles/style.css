@@ -16,6 +16,7 @@ summary::marker {
   content: '👉';
 }
 
+/* Su hijo */
 details[open] > summary::marker {
   content: '👇';
 }
@@ -31,28 +32,41 @@ details[open] > summary::marker {
 
 }
 
-/** atributo */
+/** ---- Selectores de atributo ---- */
+/* Cualquier elemento que tenga el atributo class se verá afectado */
 [class] { }
+/* Selecciona todos los elementos que tienen el atributo type con el valor exacto "email". */
 [type="email"] { }
+
+/* Todos los elementos que tienen el atributo data-id con el valor exacto "1234" */
 [data-id="1234"] { }
 
+/* Todo lo que tenga el selector data-city, se verá afectado */
 [data-city] {
   color: crimson;
 }
 
+/* Todo lo que tenga el selector data-city = Barcelona */
+/* Afectará data-city + una nueva especificación */
 [data-city="Barcelona"] {
+  /* Subrayado */
   text-decoration: underline;
 }
 
+/* Selecciona los elementos cuyo atributo data-city empieza con la letra "S". */
 [data-city^="S"] {
   background-color: gold;
 }
 
+/* Selecciona los elementos cuyo valor de data-city termina en la letra "a". */
 [data-city$="a"] {
+  /* Espaciado entre letras */
   letter-spacing: 5px;
 }
 
+/* Selecciona los elementos cuyo valor de data-city contiene la secuencia "ll". */
 [data-city*="ll"] {
+  /* Fuente */
   font-style: italic;
 }
 
@@ -61,20 +75,28 @@ details[open] > summary::marker {
 
 
 /** Aumentar especificidad de un elemento úncio  */
-
+/* Todos los h2 */
 h2 {
   padding: 0.5rem;
 }
 
+/* Clase titulo */
 h2.titulo {
   padding: 1rem;
 }
 
-h2.titulo[title] {}
+/* Clase + atributo title */
+h2.titulo[title] {
+  background-color: springgreen;
+}
 
 
 /** Hermanos adyacentes (que toca)  + */
-
+/* 
+  <h2></h2>
+  <p></p>
+  Afecta
+*/
 h2 + p {
   font-size: 1.3rem;
 }
@@ -87,6 +109,11 @@ h2 + p {
   MacOS ==> option + Ñ  
 */
 
+/* Por ejemplo:
+<h2></h2>
+<h3></h3>
+<p></p> */
+
 h2 ~ p {
   color: blue;
 }
@@ -95,12 +122,14 @@ h2 ~ p {
 
 /** selector de hijo directo    >   */
 
+/* Este selector selecciona solo los hijos directos de .lista-1 que sean elementos <li>. No seleccionará los <li> que sean nietos, bisnietos u otros descendientes. */
 .lista-1 > li {
   border: 2px solid crimson;
 }
 
 /** selector descendientes (para hijos, nietos, etc)  <espacio> */
 
+/* Este selector selecciona todos los elementos <li> que estén dentro de .lista-2, sin importar qué tan anidados estén. */
 .lista-2 li {
   border: 2px solid indigo;
 }
@@ -115,7 +144,7 @@ body div.caja > p.parrafo-1 span.azul {
 /**************************/
 
 /*? Pseudoclases ==> Cambios de estado de un elemento  */
-/* al hacer hover, cuando haces click, cuando haces foco, etc */
+/* Al hacer hover, cuando haces click, cuando haces foco, etc */
 
 
 .btn-1 {
@@ -166,6 +195,7 @@ body div.caja > p.parrafo-1 span.azul {
 
 table, td, th {
   border: 2px solid black;
+  /* Borde interno  */
   border-collapse: collapse;
 }
 
@@ -175,23 +205,25 @@ table {
   margin-block: 1rem;
 }
 
+/* Primer Hijo :first-child */
 .table-1 tr:first-child {
   background-color: rgba(0, 0, 255, 0.247);
 }
 
-
+/* Último Hijo :last-child */
 .table-1 tr:last-child {
   background-color: rgba(0, 0, 255, 0.247);
 }
 
 /*! Recuerda que first child indica que sea PRIMER HIJO DE "ALGO" no necesariamente de .table-1  */
+/* Cómo solo hay un td por cada uno afectará a todos */
 .table-1 td:first-child {
   color: crimson;
 }
 
 /** nth-child() ==> Para seleccionar un número de hijo concreto  */
 
-
+/* Posición exacta de la tabla */
 .table-2 tr:nth-child(3) {
   background-color: rgba(32, 178, 171, 0.434);
 }
@@ -212,13 +244,14 @@ table {
 /** También podemos usar una ecuación matemática */
 
 /* .table-4 tr:nth-child(4n) { */
+/* 2n + 5 selecciona todas las filas comenzando desde la quinta, y luego cada segunda fila. Es decir, selecciona las filas 5, 7, 9, 11, etc. */
 .table-4 tr:nth-child(2n + 5) {
   background-color: rgb(32, 178, 64, 0.234);
 }
 
 
 /** .not ==>  dar estilos a algo EXCEPTO (una condicion) */
-
+/* :not() Selector - Excluir Condiciones */
 .table-not tr:nth-child(even):not(.especial) {
   background-color: crimson;
 }
@@ -258,10 +291,12 @@ table {
   padding: 1rem;
 }
 
+/* Si el hijo = input, tiene el checked activo, los estilos afectarán al padre, en este caso  .padre-2 */
 .padre-2:has(input:checked) {
   border-color: lightseagreen;
 }
 
+/* Busco dentro del body un input, con la clase dark-mode activo */
 body:has(input.dark-mode:checked) {
   background-color: lightslategray;
 }
@@ -272,12 +307,7 @@ body:has(input.dark-mode:checked) {
 
 
 
-
-
-
-
-
-/*? pseudoselectores  ==> para dar estilos a cosas que son CASI ETIQUETAS HTML pero que no existen  */
+/*? Pseudoselectores  ==> para dar estilos a cosas que son CASI ETIQUETAS HTML pero que no existen  */
 
 /** ::selection  => estilizar cuando seleccionamos texto  */
 
@@ -293,6 +323,7 @@ body:has(input.dark-mode:checked) {
   font-size: 2rem;
 }
 
+/* Solo a la primera línea */
 .primera-linea::first-line {
   color: crimson;
 }
@@ -305,7 +336,7 @@ body:has(input.dark-mode:checked) {
 
 
 /** ::marker  ==> el triangulito de un details o los puntos de una lista  */
-
+/* Al marcar el triángulo */
 .details-1 summary::marker {
   color: crimson;
   content: '↦';
@@ -389,3 +420,4 @@ body:has(input.dark-mode:checked) {
   /* display: block; */
   color:crimson;
 }
+
