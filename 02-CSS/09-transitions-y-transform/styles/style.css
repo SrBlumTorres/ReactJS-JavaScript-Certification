@@ -9,15 +9,23 @@
 }
 
 .btn-1 {
+  /* Esta propiedad especifica qué aspecto (propiedad CSS) de un elemento cambiará con la transición. En este caso, se indica que el background-color (color de fondo) será lo que cambie con una transición. */
 
   transition-property: background-color;
+  /* Duración de la transición */
   transition-duration: 3s;
+  /* Define cuánto tiempo esperar antes de que comience la transición. */
   /* transition-delay: 2s; */
 
+  /* La transición ocurre a una velocidad constante, sin aceleración ni desaceleración. */
   transition-timing-function: linear;
+  /* La transición comienza lentamente y acelera hacia el final. Ideal cuando quieres un efecto que empieza suave. */
   transition-timing-function: ease-in;
+  /* La transición empieza rápido y luego se desacelera hacia el final, creando una sensación de suavidad cuando finaliza. */
   transition-timing-function: ease-out;
+  /* Combina ambos efectos, comenzando lentamente, acelerando en la mitad, y desacelerando hacia el final. */
   transition-timing-function: ease-in-out;
+  /* Es una función predeterminada que combina una aceleración suave al inicio, una aceleración rápida en el medio, y una desaceleración al final. */
   transition-timing-function: ease;
 
   /* shorthand */
@@ -41,6 +49,7 @@
 
 .caja {
   text-align: center;
+  /* Margen superior e inferior */
   margin-block: 1rem;
   width: 70px;
   height: 70px;
@@ -50,12 +59,16 @@
 
 
 .translate {
+  /* Esto mueve el elemento 50px hacia la derecha y 50px hacia abajo. El valor se refiere al desplazamiento en los ejes X e Y respectivamente. */
   transform: translate(50px, 50px);
+  /* translate: 60px -50px; es una forma más moderna de definir la transformación. Esto mueve el elemento 60px a la derecha y 50px hacia arriba (debido al valor negativo en el eje Y). */
   translate: 60px -50px;
 }
 
 .rotate {
+  /* Esto crea una sensación de profundidad 3D para las transformaciones que siguen. Cuanto menor sea el valor, mayor será la profundidad (o distorsión) percibida. */
   transform: perspective(500px) rotateZ(-45deg);
+  /* Esto rota el elemento en el eje Z (el eje perpendicular a la pantalla) en 45 grados hacia la izquierda. */
   transform: perspective(500px);
 
   rotate: y 50deg;
@@ -83,27 +96,43 @@
 }
 
 
+/* filter: grayscale(1);: Convierte la imagen completamente a escala de grises.
+transition: filter 1s ease;: 
+hover: Al pasar el ratón sobre .foto-1, la imagen volverá a su color original eliminando el efecto de escala de grises (es decir, grayscale(0)). */
 
 .foto-1 {
+  /*Convierte la imagen completamente a escala de grises. */
   filter: grayscale(1);
-  transition: filter 1s ease;
+  /* Hace que la transición entre los estados de filtro sea suave, con una duración de 1 segundo y usando la función de transición ease (comienza despacio, acelera, y luego desacelera al final). */
+  transition: filter 1s ease; 
 }
 
+/* Al pasar el ratón sobre .foto-1, la imagen volverá a su color original eliminando el efecto de escala de grises (es decir, grayscale(0)) */
 .foto-1:hover {
   filter: grayscale(0);
 }
 
 .foto-2 {
+  /* Aplica un desenfoque de 3px de radio */
   filter: blur(3px);
+  /* Hace que la transición entre el estado borroso y el estado enfocado sea suave, con una duración de 1 segundo. */
   transition: filter 1s ease;
 }
 
 .foto-2:hover {
+  /* Cuando se pasa el ratón sobre .foto-2, el desenfoque se elimina gradualmente (de 3px a 0px) en el transcurso de 1 segundo. */
   filter: blur(0);
 }
 
+
+/* Diferencias entre box-shadow y drop-shadow
+box-shadow:
+
+Crea una sombra alrededor del contorno del elemento.
+Aplica sombras en cajas o en los bordes del elemento. */
 .foto-3 {
   width: 100px;
   /* box-shadow: 5px 5px 5px 0px crimson; */
+  /* Truco para dar sombra a un icono */
   filter: drop-shadow(5px 5px 5px blue);
 }

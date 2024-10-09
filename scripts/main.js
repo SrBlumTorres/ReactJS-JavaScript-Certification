@@ -1,0 +1,3 @@
+alert("inside");
+
+console.log();

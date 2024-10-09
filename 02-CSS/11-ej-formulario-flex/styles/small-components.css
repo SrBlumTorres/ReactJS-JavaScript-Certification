@@ -1,0 +1,154 @@
+:root {
+  --lima: hsl(61, 70%, 52%);
+  --lima-opacity-20: hsl(61, 70%, 52%, 0.2);
+  --rojo: hsl(4, 69%, 50%);
+  --blanco: hsl(0, 0%, 100%);
+  --slate-100: hsl(202, 86%, 94%);
+  --slate-300: hsl(203, 41%, 72%);
+  --slate-500: hsl(200, 26%, 54%);
+  --slate-700: hsl(200, 24%, 40%);
+  --slate-900: hsl(202, 55%, 16%);
+  --slate-1000: hsl(202, 56%, 12%);
+
+  --font: 'Plus Jakarta Sans', sans-serif;
+  --main-padding: 1.7rem;
+  --main-radius: 1rem;
+  --input-radius: 0.3rem;
+  --input-height: 2.2rem;
+}
+
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  src: url('../assets/fonts/PlusJakartaSans-VariableFont_wght.ttf');
+}
+
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  src: url('../assets/fonts/PlusJakartaSans-Italic-VariableFont_wght.ttf');
+  font-style: italic;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+body {
+  background-color: var(--slate-100);
+  font-family: var(--font);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  
+  min-height: 100vh;
+}
+
+
+
+
+.wrapper {
+  background-color: white;
+  width: 80%;
+
+  display: flex;
+  border-radius: var(--main-radius);
+  overflow: hidden;
+  
+}
+
+.left {
+  flex: 1;
+  padding: var(--main-padding);
+}
+
+.right {
+  flex: 1;
+  color: var(--blanco);
+  background-color: var(--slate-900);
+  padding: calc(var(--main-padding) / 2);
+
+  border-bottom-left-radius: calc(var(--main-radius) * 2);
+}
+
+
+
+.input-combo {
+  font-size: 0.8rem;
+  margin-block: 2rem;
+}
+
+.input-group {
+  display: flex;
+  border: 1px solid var(--slate-500);
+  align-items: center;
+  margin-top: 0.5rem;
+  border-radius: var(--input-radius);
+  overflow: hidden;
+
+  transition: border-color 0.3s ease;
+
+}
+
+.input-group input {
+  border: none;
+  padding: 0.5rem;
+  outline: none;
+}
+
+.input-group span {
+  background-color: var(--slate-100);
+  padding: 0.5rem;
+
+  transition: background-color 0.3s ease;
+}
+
+
+/* .input-group:has(> input:focus) {
+  border-color: var(--lima);
+} */
+
+.input-group:focus-within {
+  border-color: var(--lima);
+}
+
+.input-group:focus-within > span {
+  background-color: var(--lima);
+}
+
+
+.two-rows {
+  margin-block: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.mortgage-type {
+  border: 1px solid var(--slate-500);
+  padding: calc(var(--main-padding) / 3);
+  border-radius: var(--input-radius);
+}
+
+
+.mortgage-type input {
+  /* accent-color: hotpink; */
+  appearance: none;
+  background-color: #dedede;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  outline: 2px solid #dedede;
+  outline-offset: 2px;
+}
+
+.mortgage-type input:checked {
+  background-color: var(--lima);
+}
+
+.mortgage-type:has(> input:checked) {
+  /* background-color: var(--lima-opacity-20); */
+  border-color: var(--lima);
+
+  background-color: oklab(from var(--lima) calc(l - 0.5) a b / 0.2);
+}

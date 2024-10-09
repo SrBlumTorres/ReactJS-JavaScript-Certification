@@ -1,0 +1,278 @@
+:root {
+  --lima: hsl(61, 70%, 52%);
+  --rojo: hsl(4, 69%, 50%);
+  --blanco: hsl(0, 0%, 100%);
+  --slate-100: hsl(202, 86%, 94%);
+  --slate-300: hsl(203, 41%, 72%);
+  --slate-500: hsl(200, 26%, 54%);
+  --slate-700: hsl(200, 24%, 40%);
+  --slate-900: hsl(202, 55%, 16%);
+  --slate-1000: hsl(202, 56%, 12%);
+
+  --font: 'Plus Jakarta Sans', sans-serif;
+  --main-padding: 1.7rem;
+  --main-radius: 1rem;
+  --input-radius: 0.3rem;
+  --input-height: 2.2rem;
+}
+
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  src: url('../assets/fonts/PlusJakartaSans-VariableFont_wght.ttf');
+}
+
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  src: url('../assets/fonts/PlusJakartaSans-Italic-VariableFont_wght.ttf');
+  font-style: italic;
+}
+
+
+* {
+  margin: 0;
+}
+
+body {
+  background-color: var(--slate-100);
+  font-family: var(--font);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  cursor: pointer;
+}
+
+input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+
+
+.mortgage-calculator {
+  background-color: var(--blanco);
+  display: flex;
+  width: 43rem;
+  border-radius: var(--main-radius);
+
+    h2 {
+      font-size: 1.2rem;
+    }
+
+    h3 {
+      color: var(--slate-700);
+      font-size: 0.8rem;
+      font-weight: 500;
+      margin-bottom: 0.5rem;
+    }
+}
+
+.form {
+  width: 50%;
+  padding: var(--main-padding);
+}
+
+.title-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 2rem;
+
+  button {
+    font-size: 0.8rem;
+    color: var(--slate-700);
+    background-color: transparent;
+    border: none;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: var(--lima);
+    }
+  }
+}
+
+.input-combo {
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
+  color: var(--slate-700);    
+  font-weight: 500;
+
+  .input-group {
+    margin-top: 0.5rem;
+    border: 1px solid var(--slate-500);
+    height: var(--input-height);
+    border-radius: var(--input-radius);
+    display: flex;
+    align-items: center;
+    color: var(--slate-900);
+    font-size: 0.8rem;
+    font-weight: 700;
+    overflow: hidden;
+
+    transition: border .3s ease;
+    
+    span {
+      background-color: var(--slate-100);
+      align-self: stretch;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-inline: 0.6rem;
+      transition: background-color .3s ease;
+    }
+  
+    input {
+      border: none;
+      font: inherit;
+      padding-inline: 0.6rem;
+      width: 100%;
+      height: 100%;
+      outline: none;
+    }
+
+    &:focus-within {
+      border-color: var(--lima);
+      
+      span {
+        background-color: var(--lima);
+      }
+    }
+  }
+}
+
+.two-columns {
+  display: flex;
+  gap: 1rem;
+
+  & > .input-combo {
+    flex: 1;
+  }
+
+}
+
+.two-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.radio-box {
+  border: 1px solid var(--slate-500);
+  height: var(--input-height);
+  border-radius: var(--input-radius);
+  display: flex;
+  align-items: center;
+  font-size: 0.7rem;
+  font-weight: 700;
+  overflow: hidden;
+
+  transition: 
+    background-color 0.3s ease,
+    border-color 0.3s ease;
+
+  &:has([type="radio"]:checked) {
+    border-color: var(--lima);
+    background-color: oklab(from var(--lima) l a b / 0.2);
+  }
+
+  [type="radio"] {
+    position: relative;
+    top: 1px;
+    margin-inline: 0.6rem;
+    accent-color: var(--lima);    
+  }
+
+ 
+}
+
+
+.btn-submit {
+  color: var(--slate-900);
+  background-color: var(--lima);
+  border: none;
+  padding: 0.7rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 200px;
+  margin-top: 1.5rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  transition: 
+    background-color 0.3s ease,
+    color 0.3s ease;
+
+  &:hover {
+    background-color: var(--slate-1000);
+    color: var(--lima);
+    
+    img {
+      filter: invert(1);
+    }
+  }
+
+  img {
+    width: 0.9rem;
+    transition: filter 0.3s ease;
+  }
+}
+
+
+.results {
+  width: 50%;
+  background-color: var(--slate-900);
+  color: var(--slate-300);
+  padding: var(--main-padding);
+  border-radius: 0 var(--main-radius) var(--main-radius) calc(var(--main-radius) * 2.5);
+
+  h2 {
+    color: var(--blanco);
+  }
+
+  p {
+    font-weight: 300;
+    font-size: 0.7rem;
+    margin-top: 0.6rem;
+  }
+
+}
+
+.results-info {
+  background-color: var(--slate-1000);
+  border-radius: 0.3rem;
+  padding: calc(var(--main-padding) - 0.5rem);
+  margin-top: 1.5rem;
+  border-top: 3px solid var(--lima);
+
+  .big-numbers {
+    color: var(--lima);
+    font-size: 2.5rem;
+    font-weight: 600;
+  }
+
+  .divider {
+    height: 2px;
+    background-color: var(--slate-900);
+    margin: 1rem 0 1.5rem;
+  }
+
+  .total-price {
+    color: white;
+    font-weight: 500;
+  }
+  
+}
+
+
+

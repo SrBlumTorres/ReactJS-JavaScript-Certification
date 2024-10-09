@@ -1,0 +1,88 @@
+/* https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
+
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+input, button {
+    font: inherit;
+}
+
+body{
+    background-color: grey;
+    margin: 0px;
+}
+
+*{
+    border: 2px solid lime
+}
+
+.container{
+    background-color: darkslategrey;
+    padding: 30px;
+    width: 80%;
+    margin: 20px auto;
+    border-radius: 10px;
+
+    /* Flex elements */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 75px;
+}
+
+span {
+    display: block;
+    text-align: center;
+}
+
+.hijo1{
+    background-color: rgb(255, 219, 219);
+    width: 150px;
+    border-radius: 10px;
+    height: 150px
+}
+
+.hijo2{
+    background-color: rgb(255, 205, 205);
+    width: 150px;
+    border-radius: 10px;
+    height: 100px
+}
+
+.hijo3{
+    background-color: rgb(255, 174, 174);
+    width: 150px;
+    border-radius: 10px;
+    height: 150px
+}
+
+.hijo4{
+    background-color: rgb(255, 114, 114);
+    width: 150px;
+    border-radius: 10px;
+    height: 100px
+}
+
+.hijo5{
+    background-color: rgb(255, 71, 71);
+    width: 150px;
+    border-radius: 10px;
+    height: 150px
+}
+
+.hijo6{
+    background-color: rgb(255, 41, 41);
+    width: 150px;
+    border-radius: 10px;
+    height: 100px
+}
+
+.hijo7{
+    background-color: rgb(255, 14, 14);
+    width: 150px;
+    border-radius: 10px;
+    height: 150px
+}
+

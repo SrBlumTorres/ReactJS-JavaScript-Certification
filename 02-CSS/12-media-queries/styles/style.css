@@ -1,0 +1,111 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+.container {
+  border: 2px solid black;
+  /* width: 80%;
+  max-width: 1000px; */
+
+  width: min(80%, 800px);
+  /* width: max(); */
+  margin: 2rem auto;
+
+
+  background-color: pink;
+}
+
+.container h2 {
+  color: white;
+}
+
+
+
+/** Hacia arriba, primero pensando en móvil y luego ir subiendo  */
+/* @media (min-width: 600px) {
+  .container {
+    background-color: hotpink;
+  }
+
+  .container h2 {
+    color: black;
+  }
+}
+
+@media (min-width: 900px) {
+  .container {
+    background-color: gold;
+  }
+} */
+
+
+/** HAcia abajo primero desktop y luego hacia abajo */
+
+/* @media (max-width: 900px) {
+  .container {
+    background-color: indigo;
+  }
+} */
+
+
+/** Entre un ancho y otro  */
+/* 
+@media (max-width: 700px) and (min-width: 600px) {
+  .container {
+    outline: 4px solid crimson;
+  }
+} */
+
+@media print {
+  .container h2 {
+    font-size: 3rem;
+  }
+}
+
+/** Según orientación de la pantalla  */
+
+
+@media (orientation: landscape) {
+  .container {
+    background-color: crimson;
+  }
+}
+
+@media (orientation: portrait) {
+  .container {
+    background-color: hotpink;
+  }
+}
+
+
+
+/** Si alguien tiene activado el modo dark en su navegador, puedes poner estilos para ese tema  */
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #232323;
+    color: white;
+  }
+}
+
+
+.btn {
+  font-size: 1.5rem;
+  background-color: indigo;
+  color: white;
+  padding: 0.5rem 0.7rem;
+  transition: translate 1s ease;
+}
+
+
+.btn:hover {
+  translate: 25px;
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+  }
+}
+

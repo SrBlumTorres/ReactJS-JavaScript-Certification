@@ -1,0 +1,95 @@
+
+.padre {
+  height: 200px;
+  background-color: indigo;
+  border: 2px solid black;
+  padding: 1rem;
+}
+
+.caja {
+  border: 2px solid white;
+  background-color: gold;
+  width: 50px;
+  height: 50px;
+}
+
+
+div.moverDerecha {
+  animation-name: moveRight;
+  animation-duration: 2s;
+  animation-delay: 0s;
+  animation-timing-function: ease;
+
+
+  animation-iteration-count: infinite;
+  animation-iteration-count: 1;
+
+  animation-direction: normal; /** por defecto */
+  animation-direction: reverse;
+  animation-direction: alternate-reverse;
+  animation-direction: alternate;
+
+  animation-fill-mode: forwards;
+
+
+  animation: moveRight 0.5s infinite alternate ease-in-out;
+}
+
+
+.animation-random {
+  animation: random 4s infinite ease;
+}
+
+
+@keyframes moveRight {
+
+  0% {
+    translate: 0;
+  }
+
+  100% {
+    translate: 0px 10px;
+  }
+
+}
+
+
+@keyframes random {
+  from {
+    translate: 0 0;
+    rotate: 0;
+  }
+
+
+  10% {
+    translate: 50px 50px;
+    rotate: 0;
+    background-color: hotpink;
+  }
+
+  73% {
+    rotate: 90deg;
+    width: 200px
+  }
+
+  to {
+    translate: 0 0;
+    rotate: 0;
+    background-color: crimson;
+  } 
+}
+
+
+.moverAbajo {
+  animation: moveDown 1s ease forwards;
+}
+
+
+@keyframes moveDown {
+  to {
+    translate: 0 50px;
+  }
+}
+
+/*! Siempre que podáis utilizad los transform para mover cosas. Porque el navegador usa la TARGETA GRÁFICA EN LUGAR DEL PROCESADOR.  */
+
