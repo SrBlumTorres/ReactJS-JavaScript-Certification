@@ -4,46 +4,72 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/style.css">
-    <link rel="stylesheet" href="./stytes/fonts.css">
-    <title>Mortgage</title>
+    <link rel="stylesheet" href="./styles/fonts.css">
+    <title>Mortgage Calculator</title>
 </head>
 <body>
     <main class="container">
         <section class="mortgage-calculator">
-            <form>
-                <div class="mortgage-header">
-                    <h1>Mortgage Calculator</h1>
+            <div class="mortgage-calculator-header">
+                <header>
+                    <h2>Mortgage Calculator</h2>
                     <button>Clear all</button>
-                </div>
+                </header>
+            </div>
+
+            <form action="">
                 <div class="mortgage-amount">
-                    <label for="mortgage-amount">
-                        <input type="number" name="mortgage-amount">
-                    </label>
+                    <label for="mortgage-amount">Mortgage Amount</label>
+                    <span>£</span>
+                    <input type="number" placeholder="300,000$" name="mortgage-amount">
                 </div>
-                <div class="mortgage-term-rate">
-                    <label for="mortgage-term"></label>
-                        <input type="number" name="mortgage-term">
-                    </label>
-                    <label for="mortgage-interest-rate"></label>
-                        <input type="number" name="mortgage-interest-rate">
-                    </label>
+
+                <div class="mortgage-conditions">
+                    <div class="mortgage-term">
+                        <label for="mortgage-term-term">Mortgage Term</label>
+                        <input type="number" placeholder="25" name="mortgage-term-term">
+                        <span>years</span>
+                    </div>
+                    <div class="mortgage-interest">
+                        <label for="mortgage-interest-rate">Interes Rate</label>
+                        <input type="number" placeholder="5.25">
+                        <span>%</span>
+                    </div>
                 </div>
+
                 <div class="mortgage-type">
-                    <label for="mortgage-type">
-                        <input type="checkbox" name="mortgage-type">
-                        <input type="checkbox" name="mortgage-type">
-                    </label>
+                    <div class="mortgage-type-repayment">
+                        <label for="mortgage-type-repayment">Repayment</label>
+                        <input type="radio" name="mortgage-type" checked> 
+                    </div>
+                    <div class="mortgage-type-interest">
+                        <label for="mortgage-type-interest" >Interest Only</label>
+                        <input type="radio" name="mortgage-type">
+                    </div>
                 </div>
-                <div class="mortgage-button">
-                    <button>Calculate Repayments</button>
-                </div>
+
+                <div class="mortgage-calculate-repayments">
+                    <button class="calculate-repayments-btn">
+                        <img src="./assets/images/icon-calculator.svg" alt="Icono de una calculadora">
+                        <p>Calculate Repayments</p>
+                      </button>
+                </div>  
+
             </form>
         </section>
-        <section class="mortgage-your-results">
-            <h2>Your Results</h2>
-            <div class="your_results">
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam iure, nihil distinctio libero, rerum atque quae et optio perferendis dignissimos officiis ex? Dolorum optio expedita corrupti quam dolorem voluptatem facilis.</p>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum quidem dicta aut mollitia suscipit aperiam. Esse suscipit fugit cum eligendi fuga, alias excepturi nobis, laudantium reprehenderit dignissimos delectus, a velit.</p>
+        <section class="mortgage-calculator-results">
+            <div class="mortgage-calculator-results-header">
+                <header>
+                    <h2>Your results</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus repellendus, ipsam numquam ullam aspernatur assumenda in tempora expedita doloremque nemo, obcaecati recusandae voluptatum, sit consectetur. Assumenda doloremque quam odio expedita.</p>
+                </header>
+            </div>
+            <div class="mortgage-calculator-repay">
+                <div class="mortgage-calculator-monthly-repayments">
+                </div>
+                <hr>
+                <div class="mortgage-calculator-repay-term">
+                </div>
             </div>
         </section>
     </main>

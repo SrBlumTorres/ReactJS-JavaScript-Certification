@@ -8,43 +8,137 @@
     --Slate-700: hsl(200, 24%, 40%);
     --Slate-900: hsl(202, 55%, 16%);
 
-    /* --heading-font: 'Young Serif', serif;
-    --body-font: 'Outfit', sans-serif; */
+    --heading-font: 'Young Serif', serif;
+    --body-font: 'Outfit', sans-serif;
 }
 
 *, *::after, *::before {
     box-sizing: border-box;
+    border: 0.5px solid red;
 }
 
 input, button {
     font: inherit;
+    padding: 5px;
 }
 
 body {
-    min-height: 100vh;
-    margin: 0;
-    display: flex;                /* Activa flexbox en el body */
-    justify-content: center;       /* Centra horizontalmente */
-    align-items: center;           /* Centra verticalmente */
+    margin: 0px;
     background-color: var(--Slate-100);
+    height: 100vh;
 }
 
-/* Formulario */
 .container {
     background-color: var(--blanco);
-    width: 75%;
+    width: 60%;
+    margin: 2.5rem auto;
+    font-style: var(--body-font);
+    /* Flex properties */
     display: flex;
-    justify-content: space-between; /* Para distribuir el contenido dentro del container */
-    align-items: flex-start;        /* Alinea el contenido del container en la parte superior */
-    padding: 20px;                  /* Añade espacio alrededor del container */
+    justify-content: center; /* Centra horizontalmente */
 }
 
+header {
+    font-style: var(--heading-font);
+}
+
+/*! ------------------------ LEFT BOX ------------------------*/
 .mortgage-calculator {
     background-color: var(--blanco);
+    color: var(--Slate-700);
     width: 50%;
+    /* border-radius: 75%; */
+
+    /* Flex child options */
+    
 }
 
-.mortgage-your-results {
+.mortgage-calculator header {
+    color: var(--Slate-900);
+}
+
+.mortgage-calculator > div, .mortgage-calculator > form{
+    padding: 20px;
+}
+
+.mortgage-calculator-header > header {
+    /* flex properties */
+    display: flex;
+    justify-content: space-between;
+}
+
+.mortgage-calculator-header > header > button {
+    all: unset;
+    background: none;
+    text-decoration: underline;
+    color: var(--Slate-500);
+    font-style: var(--);
+}
+
+
+.mortgage-amount {
+    /* flex properties */
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+}
+
+.mortgage-conditions {
+
+    /* flex properties */
+    display: flex;
+    justify-content: space-between; 
+}
+
+/* childs */
+.mortgage-conditions div{
+
+    /* flex properties */
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+}
+
+.calculate-repayments-btn {
+    background-color: var(--lima);
+    color: var(--Slate-900);
+    font-size: smaller;
+    border-radius: 30px;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px 20px;
+}
+
+/*! ------------------------ RIGHT BOX ------------------------*/
+.mortgage-calculator-results{
     background-color: var(--Slate-900);
+    color: var(--Slate-500);
     width: 50%;
+    border-radius: 0 15px 15px 40px;
+
+    /* Flex child options */
+    
+}
+
+
+.mortgage-calculator-results-header > header{
+    color: var(--blanco);
+}
+
+.mortgage-term{
+    flex-direction: column;
+}
+
+.mortgage-calculator-results > div{
+    padding: 20px;
+}
+
+.mortgage-calculator-repay{
+    background-color: var(--Slate-900);
+}
+
+.mortgage-calculator-repay > div {
+    padding: 20px;
 }
