@@ -93,3 +93,26 @@ function saludar () {
 
 saludar();
 
+
+
+//********************************** */
+
+//* EXTRA!!! Convertir textos a números
+const num = '13.56';
+console.log(parseInt(num));
+console.log(parseFloat(num));
+console.log(Number(num));
+console.log(+num);
+console.log(+'25');
+
+//* EXTRA 2!!!! Saber si un valor es convertible a Number o no
+
+console.log(isNaN(25));
+console.log(isNaN('25'));
+console.log(isNaN(null));
+console.log(isNaN([]));
+
+console.log(isNaN(undefined));
+console.log(isNaN('hola'));
+console.log(isNaN({}));
+

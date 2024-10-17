@@ -1,4 +1,4 @@
-const frase = '¿Hola, qué áse?';
+const frase = '¿  Hola,    qué    áse? ';
 //             01234567
 
 
@@ -39,7 +39,7 @@ console.log(fraseMinusculas);
 //* replace() y replaceAll() 👉 Para sustituir un trozo de texto por otro
 
 console.log(frase.replace('Hola', 'Adios'));
-console.log(frase.replaceAll(' ', '-'));
+console.log(frase.replaceAll(' ', ''));
 
 
 //* .endsWith(substring) 👉 Devuelve true o false si el string termina como tu le digas

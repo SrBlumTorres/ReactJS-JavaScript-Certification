@@ -20,38 +20,50 @@
             <form action="">
                 <div class="mortgage-amount">
                     <label for="mortgage-amount">Mortgage Amount</label>
-                    <span>£</span>
-                    <input type="number" placeholder="300,000$" name="mortgage-amount">
+                    <div class="mortgage-amount-input">
+                        <span>£</span>
+                        <input type="number" placeholder="300,000" name="mortgage-amount">
+                    </div>
                 </div>
 
                 <div class="mortgage-conditions">
                     <div class="mortgage-term">
                         <label for="mortgage-term-term">Mortgage Term</label>
-                        <input type="number" placeholder="25" name="mortgage-term-term">
-                        <span>years</span>
+                        <div class="mortgage-term-term-input">
+                            <input type="number" placeholder="25" name="mortgage-term-term">
+                            <span>years</span>
+                        </div>
                     </div>
                     <div class="mortgage-interest">
-                        <label for="mortgage-interest-rate">Interes Rate</label>
-                        <input type="number" placeholder="5.25">
-                        <span>%</span>
+                        <label for="mortgage-interest-rate">Interest Rate</label>
+                        <div class="mortgage-interest-rate-input">
+                            <input type="number" placeholder="5.25">
+                            <span>%</span>
+                        </div>
                     </div>
                 </div>
 
                 <div class="mortgage-type">
                     <div class="mortgage-type-repayment">
-                        <label for="mortgage-type-repayment">Repayment</label>
-                        <input type="radio" name="mortgage-type" checked> 
+                        <label for="mortgage-type-repayment">Mortgage Type</label>
+                        <div class="mortgage-type-repayment-input">
+                            <input type="radio" name="mortgage-type" checked>
+                            <span>Repayment</span>
+                        </div>
                     </div>
                     <div class="mortgage-type-interest">
-                        <label for="mortgage-type-interest" >Interest Only</label>
-                        <input type="radio" name="mortgage-type">
+                        <label for="mortgage-type-interest"></label>
+                        <div class="mortgage-type-interest-input">
+                            <input type="radio" name="mortgage-type">
+                            <span>Interest Only</span>
+                        </div>
                     </div>
                 </div>
 
                 <div class="mortgage-calculate-repayments">
                     <button class="calculate-repayments-btn">
                         <img src="./assets/images/icon-calculator.svg" alt="Icono de una calculadora">
-                        <p>Calculate Repayments</p>
+                        <span>Calculate Repayments</span>
                       </button>
                 </div>  
 
@@ -61,14 +73,18 @@
             <div class="mortgage-calculator-results-header">
                 <header>
                     <h2>Your results</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus repellendus, ipsam numquam ullam aspernatur assumenda in tempora expedita doloremque nemo, obcaecati recusandae voluptatum, sit consectetur. Assumenda doloremque quam odio expedita.</p>
+                    <span>Yor results are shown below based on the information you provided. To adjust the results, edit the form and click "calculate repayments" again.</span>
                 </header>
             </div>
             <div class="mortgage-calculator-repay">
                 <div class="mortgage-calculator-monthly-repayments">
+                    <span>Your monthly repayments</span>
+                    <span>£1,797.74</span>
                 </div>
                 <hr>
                 <div class="mortgage-calculator-repay-term">
+                    <span>Total you'll repay over term</span>
+                    <span>£539,322.94</span>
                 </div>
             </div>
         </section>

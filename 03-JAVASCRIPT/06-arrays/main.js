@@ -52,7 +52,7 @@ const arr1 = [2, 4]; // 0x123
 
 const arr2 = arr1; // 0x123
 
-arr1[0] = '🛻';
+arr2[0] = '🛻';
 
 console.log(arr1);
 console.log(arr2);

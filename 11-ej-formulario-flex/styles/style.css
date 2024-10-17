@@ -10,16 +10,30 @@
 
     --heading-font: 'Young Serif', serif;
     --body-font: 'Outfit', sans-serif;
+
+    --input-radius: 0.3rem;
+    --padding-box-elements: 25px;
 }
 
 *, *::after, *::before {
     box-sizing: border-box;
-    border: 0.5px solid red;
+    /* helper */
+    /* border: 0.5px solid red !important; */
+    font-family: sans-serif !important;
 }
 
 input, button {
     font: inherit;
-    padding: 5px;
+    padding: 0.5rem !important;
+    all: unset;
+    background: none;
+}
+
+/* Eliminar flechas del input en Chrome, Safari y Edge */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
 
 body {
@@ -30,27 +44,39 @@ body {
 
 .container {
     background-color: var(--blanco);
-    width: 60%;
+    width: 40%;
     margin: 2.5rem auto;
-    font-style: var(--body-font);
+    font-family: var(--body-font);
+    border-radius: 15px;
+
     /* Flex properties */
     display: flex;
     justify-content: center; /* Centra horizontalmente */
 }
 
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+    .container {
+        width: 55%;
+    }
+}
+
+
 header {
-    font-style: var(--heading-font);
+    font-family: var(--heading-font);
+}
+
+form > div > div {
+    margin-top: 0.8rem;
 }
 
 /*! ------------------------ LEFT BOX ------------------------*/
+/* ------------- Mortgage Calculator block -------------*/
 .mortgage-calculator {
     background-color: var(--blanco);
     color: var(--Slate-700);
     width: 50%;
-    /* border-radius: 75%; */
-
+    border-radius: 15px;
     /* Flex child options */
-    
 }
 
 .mortgage-calculator header {
@@ -58,7 +84,7 @@ header {
 }
 
 .mortgage-calculator > div, .mortgage-calculator > form{
-    padding: 20px;
+    padding: var(--padding-box-elements);
 }
 
 .mortgage-calculator-header > header {
@@ -67,14 +93,12 @@ header {
     justify-content: space-between;
 }
 
+/* button clear all */
 .mortgage-calculator-header > header > button {
-    all: unset;
-    background: none;
     text-decoration: underline;
     color: var(--Slate-500);
-    font-style: var(--);
+    cursor: pointer;
 }
-
 
 .mortgage-amount {
     /* flex properties */
@@ -83,62 +107,213 @@ header {
     /* justify-content: space-between; */
 }
 
-.mortgage-conditions {
+.mortgage-amount-input {
+    /* flex properties */
+    display: flex;
+    align-items: center;
+    border-radius: var(--input-radius);
+    border: 1px solid var(--Slate-500);
+    /* En caso de que algo sobresalgo, ocúltalo */
+    overflow: hidden;
+}
+
+.mortgage-amount-input > span {
+    background-color: var(--Slate-100);
+    padding-inline: 0.8rem;
 
     /* flex properties */
     display: flex;
-    justify-content: space-between; 
+    /* alinear un elemento individual dentro de un contenedor que usa CSS Flexbox o CSS Grid */
+    /* Este se estira para ocupar todo el espacio libre dentro del contenedor */
+    align-self: stretch;
+    align-items: center;
+    transition: background-color 1s ease;
 }
 
-/* childs */
-.mortgage-conditions div{
+.mortgage-amount-input > input{
+    width: 100%;
+    display: flex;
+}
 
-    /* flex properties */
+/* Interacciones con input */
+.mortgage-amount-input:has(input:focus){
+    border-color: var(--lima);
+}
+
+.mortgage-amount-input:has(input:focus) > span {
+    background-color: var(--lima);
+}
+
+/*------------- Mortgage Conditions /*-------------*/
+
+.mortgage-conditions {
+    display: flex;
+    justify-content: space-between;
+}
+
+.mortgage-term, .mortgage-interest{
+    width: 47%;
+}
+
+.mortgage-term-term-input, .mortgage-interest-rate-input {
+    display: flex;
+    border-radius: var(--input-radius);
+    border: 1px solid var(--Slate-500);
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+
+.mortgage-term-term-input > input, .mortgage-interest-rate-input > input{
+    width: 100%;
+}
+
+.mortgage-term-term-input > span, .mortgage-interest-rate-input > span{
+    align-self: stretch;
+    background-color: var(--Slate-100);
+    align-content: center;
+    padding-inline: 0.8rem;
+}
+
+/* Input Mortgage Conditions interactions */
+.mortgage-term-term-input:has(input:focus){
+    border-color: var(--lima);
+}
+
+.mortgage-term-term-input:has(input:focus) > span {
+    background-color: var(--lima);
+}
+
+.mortgage-interest-rate-input:has(input:focus){
+    border-color: var(--lima);
+}
+
+.mortgage-interest-rate-input:has(input:focus) > span {
+    background-color: var(--lima);
+}
+
+/* ------------- Mortgage Type ------------- */
+
+.mortgage-type {
     display: flex;
     flex-direction: column;
-    width: 45%;
 }
 
+.mortgage-type-repayment-input, .mortgage-type-interest-input{
+    display: flex;
+    width: 100%;
+    border-radius: var(--input-radius);
+    border: 1px solid var(--Slate-500);
+    align-items: center;
+    gap: 0.5rem;
+    padding-inline: 0.8rem;
+    padding: 0.6rem;
+    margin-bottom: 0.2rem;
+}
+
+/* Restablecemos valores de input */
+.mortgage-type-repayment-input > input[type="radio"], 
+.mortgage-type-interest-input > input[type="radio"] {
+    all: unset; /* Elimina todos los estilos personalizados */
+    appearance: radio; /* Fuerza el estilo del navegador por defecto */
+    -webkit-appearance: radio; /* Para asegurar compatibilidad en navegadores WebKit */
+    -moz-appearance: radio; /* Para navegadores Gecko como Firefox */
+    accent-color: var(--lima);
+}
+
+/* Input checked effects */
+.mortgage-type-repayment-input:has(input[type="radio"]:checked),
+.mortgage-type-interest-input:has(input[type="radio"]:checked) {
+    border: 1px solid var(--lima);
+    background-color: hsl(61, 70%, 92%);
+}
+
+
+
+/* ------------- Calculate Repayments Box ------------- */
 .calculate-repayments-btn {
+    border: 1px solid var(--lima);
+    margin-top: 1.5rem;
     background-color: var(--lima);
     color: var(--Slate-900);
     font-size: smaller;
+    font-weight: bold;
     border-radius: 30px;
     text-align: center;
+    cursor: pointer;
+
     display: flex;
-    flex-direction: row;
     align-items: center;
-    padding: 0px 20px;
 }
 
+.calculate-repayments-btn:hover {
+    border: 1px solid var(--lima);
+    background-color: hsl(61, 100%, 90%);
+}
+
+button.calculate-repayments-btn > img{
+    padding-inline-start: 1.5rem;
+}
+
+button.calculate-repayments-btn > span{
+    padding-inline-end: 1.5rem;
+}
+
+
 /*! ------------------------ RIGHT BOX ------------------------*/
-.mortgage-calculator-results{
+.mortgage-calculator-results {
     background-color: var(--Slate-900);
-    color: var(--Slate-500);
+    color: var(--Slate-700);
     width: 50%;
     border-radius: 0 15px 15px 40px;
 
-    /* Flex child options */
-    
 }
 
-
-.mortgage-calculator-results-header > header{
+.mortgage-calculator-results-header > header {
     color: var(--blanco);
 }
 
-.mortgage-term{
-    flex-direction: column;
+.mortgage-calculator-results-header > header > span {
+    color: var(--Slate-700);
+    text-align: justify;
 }
 
-.mortgage-calculator-results > div{
-    padding: 20px;
+
+.mortgage-calculator-results > div:first-child{
+    padding: var(--padding-box-elements);
 }
 
-.mortgage-calculator-repay{
-    background-color: var(--Slate-900);
+
+.mortgage-calculator-repay {
+    width: 80%;
+    margin: auto;
+    background-color: hsl(202, 57%, 13%);
+    border-radius: 0.7rem;
+    transition: transform 0.8s ease;
 }
+
+.mortgage-calculator-repay:hover {
+    transform: scale(1.05);
+}
+
 
 .mortgage-calculator-repay > div {
-    padding: 20px;
+    padding: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
+
+.mortgage-calculator-monthly-repayments > span:last-child {
+    color: var(--lima);
+    font-size: 3rem;
+    font-family: var(--body-font);
+}
+
+.mortgage-calculator-repay-term > span:last-child {
+    color: white;
+    font-size: 1.5rem;
+}
+
+

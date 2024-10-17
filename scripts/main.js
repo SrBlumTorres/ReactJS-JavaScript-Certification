@@ -148,23 +148,48 @@
 
 // ```
 
-function range(paramNumber_1, paramNumber_2 = null, paramOptional = 1) {
-    const result = [];
+// function range(paramNumber_1, paramNumber_2 = null, paramOptional = 1) {
+//     const result = [];
 
-    // Si solo se pasa un parámetro, se asume que es el fin del rango y empieza desde 0.
-    if (paramNumber_2 === null) {
-        for (let i = 0; i <= paramNumber_1; i += paramOptional) {
-            result.push(i);
-        }
-    } else {
-        // Si se pasan dos parámetros, genera el rango desde paramNumber_1 hasta paramNumber_2
-        for (let i = paramNumber_1; i <= paramNumber_2; i += paramOptional) {
-            result.push(i);
-        }
+//     // Si solo se pasa un parámetro, se asume que es el fin del rango y empieza desde 0.
+//     if (paramNumber_2 === null) {
+//         for (let i = 0; i <= paramNumber_1; i += paramOptional) {
+//             result.push(i);
+//         }
+//     } else {
+//         // Si se pasan dos parámetros, genera el rango desde paramNumber_1 hasta paramNumber_2
+//         for (let i = paramNumber_1; i <= paramNumber_2; i += paramOptional) {
+//             result.push(i);
+//         }
+//     }
+
+//     return result;
+// }
+
+// console.log(range(45, 65, 3));
+
+
+// Ejercicio 1: Manipulación de Strings
+// Escribe una función llamada formatearTexto que reciba una cadena de texto y la devuelva en formato "Título". Esto significa que la primera letra de cada palabra debe estar en mayúsculas y las demás en minúsculas.
+
+// js
+// Copiar código
+function formatearTexto(texto) {
+    //Separamos la frase por espacios
+    const splitText = texto.split(' ');
+    const formatedText = [];
+
+    for (const element of splitText) {
+        console.log(34);
+        console.log(element[0]);
     }
 
-    return result;
+    return formatedText;
+    // const textFormated = [];
+    // textFormated
+    // return textFormated.length;
+  // Tu código aquí
 }
 
-console.log(range(45, 65, 3));
-
+console.log(formatearTexto("Hola, como estás?")); 
+// Salida esperada: "Aprendiendo Javascript Es Divertido"
