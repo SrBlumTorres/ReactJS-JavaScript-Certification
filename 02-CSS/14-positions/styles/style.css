@@ -39,12 +39,24 @@ summary {
   padding: 0.5rem;
 }
 
-/** RELATIVE */
 
+/**? En CSS, las propiedades position (relative, absolute, fixed y sticky) determinan cómo se posicionan los elementos en la página, es decir, cómo se comportan en relación con otros elementos y el flujo general del documento. Vamos a verlas una por una: */
+
+/**! 
+  relative: Desplaza al elemento en relación con su posición normal, pero no sale del flujo del documento.
+  absolute: Posiciona al elemento en relación a su contenedor posicionado más cercano y lo saca del flujo.
+  fixed: Fija el elemento en relación al viewport, independientemente del scroll.
+  sticky: Comienza siendo relativo, pero cuando se alcanza un cierto punto, se "pega" y se comporta como fixed. 
+*/
+
+/**! Mirar cada una de las características principales de cada uno, aclara muchas cosas */
+
+/** RELATIVE */
 
 /*! Cuando pongo position relative NO PASA NADA DE ENTRADA */
 /** Pero se activan 5 nuevas propiedades que antes no podía usar */
 
+/* Básica */
 .hijo-relative {
   position: relative;
 
@@ -66,6 +78,7 @@ summary {
 
 
 /** Absolute */
+/**! Al trabajar con Absolute reocordemos que el "Padre" si o si debe tener un tipo de position*/
 /*! Por defecto una caja con absolute pierde el ANCHO AUTOMÁTICO del 100% */
 /*! Por defecto una caja con absolute SE SALE DEL FLUJO DEL RESTO DE CAJAS */
 /*! Las 4 propiedades de posición van a coger como referencia el ASCENDIENTE MÁS CERCANO QUE TENGA UN POSITION PUESTO */
@@ -86,11 +99,13 @@ summary {
 }
 
 .hijo-absolute-2 {
+  position: absolute;
   width: 150px;
   height: 100px;
-  position: absolute;
 
+  /* calc() 50% se refiere al 50% del ancho del contenedor (o del viewport, si el contenedor no está posicionado). */
   left: calc(50% - 75px);
+  /* Al hacer 50% - 50px, se asegura que el elemento se coloque exactamente en el centro vertical. De nuevo, se resta la mitad de su altura (100px / 2 = 50px) para centrarlo. */
   top: calc(50% - 50px);
 }
 
@@ -103,6 +118,7 @@ summary {
   left: 50%;
   top: 50%;
 
+  /**? La propiedad translate en CSS se utiliza para mover (trasladar) un elemento en el espacio, modificando su posición en los ejes "X" y "Y". Cuando ves translate(-50%, -50%), se está utilizando para centrar un elemento de manera precisa, incluso cuando su tamaño es dinámico (es decir, desconocido o variable). */
   translate: -50% -50%;
 }
 
@@ -136,6 +152,7 @@ summary {
 
 /** Fixed */
 
+/**! Común en navs*/
 /*! Por defecto una caja con fixed pierde el ANCHO AUTOMÁTICO del 100% */
 /*! Por defecto una caja con fixed SE SALE DEL FLUJO DEL RESTO DE CAJAS */
 /*! Las 4 propiedades de posición van a coger como referencia SIEMPRE A LA VENTANA DEL NAVEGADOR */
@@ -187,6 +204,7 @@ img {
   overflow: hidden;  
 }
 
+/* ----------- Primera caja -----------*/
 .gallery-box .text {
   position: absolute;
   border: 2px solid white;
@@ -231,7 +249,7 @@ img {
 }
 
 
-/** Gallery box cool  */
+/** -------- Gallery box cool  ----------*/
 .gallery-box-cool {
   position: relative;
   /* border: 3px solid crimson; */

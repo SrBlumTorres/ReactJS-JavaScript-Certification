@@ -27,7 +27,7 @@ var nombre = 'Ivan';
 
 //* Usaremos let y const
 
-// let permite volver a asignar un nuevo valo a la variable
+// let permite volver a asignar un nuevo valor a la variable
 let apellido = 'Luengo';
 console.log(apellido);
 

@@ -64,8 +64,8 @@ console.log(arr2);
 const arr3 = [...arr1]; // 0x999
 arr3[0] = '🚣';
 
-console.log(arr1);
 console.log(arr3);
+console.log(arr1);
 
 const arr4 = arr1.concat(); // 0x456
 

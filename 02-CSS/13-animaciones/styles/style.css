@@ -15,24 +15,25 @@
 
 
 div.moverDerecha {
-  animation-name: moveRight;
-  animation-duration: 2s;
-  animation-delay: 0s;
-  animation-timing-function: ease;
+  animation-name: moveRight; /* Nombre de la animación */
+  animation-duration: 2s; /* Duración de la animación */
+  animation-delay: 0s; /* Cuánto tiempo esperar antes de comenzar */
+  animation-timing-function: ease; /* Controla la aceleración/desaceleración */
 
 
-  animation-iteration-count: infinite;
-  animation-iteration-count: 1;
+  animation-iteration-count: infinite; /* La animación se repetirá indefinidamente */
+  animation-iteration-count: 1; /* La animación se repetirá una vez */
 
-  animation-direction: normal; /** por defecto */
-  animation-direction: reverse;
-  animation-direction: alternate-reverse;
-  animation-direction: alternate;
-
-  animation-fill-mode: forwards;
+  animation-direction: normal; /** (por defecto) */ /**Se mueve en la dirección natural de los keyframes (de 0% a 100%). */
+  animation-direction: reverse; /** La animación se ejecuta al revés (de 100% a 0%). */
+  animation-direction: alternate-reverse; /** Alterna entre las dos direcciones, de adelante hacia atrás. */
+  animation-direction: alternate; /** Alterna comenzando en reversa. */
 
 
-  animation: moveRight 0.5s infinite alternate ease-in-out;
+  animation-fill-mode: forwards; /* Mantiene el último estado de la animación */
+  
+  /* Forma simplificada de declarar todas las propiedades */
+  animation: moveRight 0.7s infinite alternate ease-in-out;
 }
 
 
@@ -57,13 +58,10 @@ div.moverDerecha {
 @keyframes random {
   from {
     translate: 0 0;
-    rotate: 0;
   }
-
 
   10% {
     translate: 50px 50px;
-    rotate: 0;
     background-color: hotpink;
   }
 
@@ -74,20 +72,31 @@ div.moverDerecha {
 
   to {
     translate: 0 0;
-    rotate: 0;
     background-color: crimson;
   } 
 }
 
 
 .moverAbajo {
-  animation: moveDown 1s ease forwards;
+  animation: moveDown 3s infinite reverse ease-in-out;
 }
 
 
 @keyframes moveDown {
+  from {
+    /* Múevete */
+    translate: 0 10px;
+    background-color: #CEDC00;
+  }
+
+  30% {
+    background-color: #00594F;
+    rotate: 90deg;
+  }
+
   to {
     translate: 0 50px;
+    background-color: #00342F;
   }
 }
 

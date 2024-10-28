@@ -1,0 +1,20 @@
+{
+  "name": "17-npm-y-package-json",
+  "version": "1.0.0",
+  "main": "main.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon main.js",
+    "fenix": "rm -r node_modules && npm i"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "nanoid": "^5.0.7"
+  },
+  "devDependencies": {
+    "nodemson": "^3.1.7"
+  }
+}

@@ -85,8 +85,17 @@ let segundos = '5';
 
 console.log(`${hora.padStart(2, '0')}:${minutos.padStart(2, '0')}:${segundos.padStart(2, '0')}`);
 
+function invertirString(frase) {
+  const phraseComprobationLenght = frase.split(' ');
 
+  if (phraseComprobationLenght.length === 1){
+    return frase.split('').reverse();
+  }
 
+  return frase.split(' ').reverse();
+}
+
+console.log(invertirString('Hola como estás?'));
 
 
 

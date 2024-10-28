@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script defer src="./main.js"></script>
+  <link rel="stylesheet" href="./styles/style.css">
+  <title>Formularios en el DOM</title>
+</head>
+<body>
+  <h1>Formularios en el DOM</h1>
+
+
+  <form class="form">
+
+    <input class="margin" type="text" name="name" placeholder="Nombre...">
+
+    <input class="margin" type="number" name="age" placeholder="Edad...">
+
+    <label class="margin">Color:
+      <input type="color" name="favoriteColor">
+    </label>
+
+    <label class="margin">Cumple:
+      <input type="date" name="birthday">
+    </label>
+
+    <h2>Checkboxes</h2>
+
+    <label class="margin">
+      Javascript
+      <input type="checkbox" name="js">
+    </label>
+
+    <label class="margin">
+      HTML
+      <input type="checkbox" name="html">
+    </label>
+
+
+    <h2>Radio</h2>
+
+    <label class="margin">
+      Femenino
+      <input type="radio" name="gender" value="female">
+    </label>
+
+    <label class="margin">
+      Masculino
+      <input type="radio" name="gender" value="male">
+    </label>
+
+    <label class="margin">
+      No Binario
+      <input type="radio" name="gender" value="non-binary">
+    </label>
+
+
+    <select name="city">
+      <option value="">Selecciona una ciudad...</option>
+      <option value="Barcelona">Barcelona</option>
+      <option value="Madrid">Madrid</option>
+      <option value="Sevilla">Sevilla</option>
+      <option value="A Coruña">A Coruña</option>
+    </select>
+
+    <hr>
+
+    <input name="note" type="range" min="1" max="10" step="1" value="5">
+    <span class="note-output">5</span>
+
+    <button class="margin" type="submit">Enviar</button>
+  </form>
+  
+</body>
+</html>

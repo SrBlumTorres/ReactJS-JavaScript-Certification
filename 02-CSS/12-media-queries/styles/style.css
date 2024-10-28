@@ -20,9 +20,8 @@
 }
 
 
-
 /** Hacia arriba, primero pensando en móvil y luego ir subiendo  */
-/* @media (min-width: 600px) {
+@media (min-width: 600px) {
   .container {
     background-color: hotpink;
   }
@@ -36,26 +35,27 @@
   .container {
     background-color: gold;
   }
-} */
+}
 
 
 /** HAcia abajo primero desktop y luego hacia abajo */
 
-/* @media (max-width: 900px) {
+@media (max-width: 900px) {
   .container {
     background-color: indigo;
   }
-} */
+}
 
 
 /** Entre un ancho y otro  */
-/* 
+
 @media (max-width: 700px) and (min-width: 600px) {
   .container {
     outline: 4px solid crimson;
   }
-} */
+}
 
+/* El selector @media print se aplica exclusivamente cuando la página se está preparando para la impresión. Esto permite definir un conjunto de estilos que solo serán visibles o efectivos en el formato impreso. */
 @media print {
   .container h2 {
     font-size: 3rem;
@@ -63,14 +63,14 @@
 }
 
 /** Según orientación de la pantalla  */
-
-
+/* horizontal */
 @media (orientation: landscape) {
   .container {
     background-color: crimson;
   }
 }
 
+/* Vertical */
 @media (orientation: portrait) {
   .container {
     background-color: hotpink;
@@ -80,11 +80,14 @@
 
 
 /** Si alguien tiene activado el modo dark en su navegador, puedes poner estilos para ese tema  */
-
 @media (prefers-color-scheme: dark) {
   body {
     background-color: #232323;
     color: white;
+  }
+
+  .container::after{
+    content: "Dark mode on";
   }
 }
 
@@ -102,7 +105,7 @@
   translate: 25px;
 }
 
-
+/* @media (prefers-reduced-motion: reduce) que está diseñada para mejorar la accesibilidad, detectando si el usuario prefiere reducir las animaciones o las transiciones en su sistema operativo o navegador. */
 @media (prefers-reduced-motion: reduce) {
   * {
     transition: none !important;
