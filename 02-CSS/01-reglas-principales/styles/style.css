@@ -11,7 +11,7 @@ h1{
     color: green;
 }
 
-/*! SEGUNDA NORMA: Lo que es MÁS ESPECÍFICO gana  alo que es MENOS ESPECÍFICO, ej: id's, class, selector */
+/*! SEGUNDA NORMA: Lo que es MÁS ESPECÍFICO gana a lo que es MENOS ESPECÍFICO, ej: id's, class, selector */
 /*
     Niveles de especifidad de menor a mayor:
     

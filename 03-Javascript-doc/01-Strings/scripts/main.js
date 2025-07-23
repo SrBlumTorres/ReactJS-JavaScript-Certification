@@ -10,7 +10,7 @@
 
 
 // Extracción
-    // Pese a que actualmente el método substr() esté marcado como 'deprecated' se sigue utilizando, junto a otros métodos más moderos como slice() o substring()
+    // Pese a que actualmente el método substr() esté marcado como 'deprecated' se sigue utilizando, junto a otros métodos más modernos como slice() o substring()
         // slice()
             // Devuelve una 'copia' de una parte del array dentro de un nuevo array empezando por inicio hasta fin '(fin no incluido)'
             // Retorna
@@ -41,7 +41,6 @@
             // Si el prrimer elemento es más grande que el segundo es como si le diéramos la vuelta (a == b) y (b == a)
 
     function subsExtraction(start = 0, end){
-        // const arrData = ['Manzana', 'Pera', 'Mango', 'Piña'];
         const stringData = 'Hola amigo mío ¿Cómo estás?';
 
         if(start !== 0){
@@ -176,4 +175,5 @@
 
     const stringToJoin = string.split(',', 3); // []
     console.log(stringToJoin.join());
+    
     

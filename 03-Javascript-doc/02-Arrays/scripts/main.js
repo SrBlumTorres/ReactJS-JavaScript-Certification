@@ -1,7 +1,7 @@
 //Arrays
 // Una de las cosas más a tener en cuenta a la hora de trabajar con arrays es el tipo de método que le estamos aplicando, ya que la mayoría "MÚTAN"!! el array y no siempre queremos eso, por eso veremos el operador ...spread
 
-    // Acceso
+    //! Acceso
         // Acesso mediante índice []
     const string = 'Bienvenidos al Camp Nou';
     console.log(string[0]);
@@ -20,7 +20,7 @@
 
 
 
-// Comparación
+//! Comparación
     // Comparar arrays en JavaScript puede ser más complicado que comparar tipos primitivos debido a que los arrays son tipos de referencia.
         // Operador de comparación estricta ===
             // Retorno : Boolean
@@ -49,9 +49,9 @@
 
     console.log(areArraysEqual(collecNumb, numbCollec));
     
-
     
-// Adición y extracción, modificación
+    
+//! Adición, extracción y modificación
     // --- AÑADIR nuevos elementos ---
         // push()
             // Añade uno o más elementos al "final" de un array y devuelve la nueva longitud del array.
@@ -122,8 +122,9 @@
             // Cambia el contenido de un array eliminando elementos existentes y/o agregando nuevos elementos
             // Retorno: Array vacío [] si no se ha eliminado nada | Array con los elementos eliminados
             // Tips
-                // splice() accepta como parámetro ...spread
-                // (posición, elementos a eliminar, nuevos elementos)
+                // · splice() accepta como parámetro ...spread
+                // · (posición, elementos a eliminar, nuevos elementos)
+                // · Si le pasas un tercer parámetro, lo pondrá donde HA CORTADO
     const months = ['Enero', 'Marzo', 'Mayo'];
     months.splice(1, 0, 'Febrero');
     console.log(months);
@@ -144,7 +145,7 @@
     console.log(months);
     
 // Ordenación
-    // sort()
+    // sort() -> Mover a High Order Methods, explorar mas conceptos, tira de callbacks
         // El método sort() en JavaScript organiza los elementos de un array en el lugar (modificando el array original). Si no se especifica una función de comparación, sort() convierte los elementos a texto y los ordena alfabéticamente, lo que puede dar resultados inesperados con números
         // Retorno array modificado ordenado
             // Tips
@@ -165,7 +166,7 @@
     console.log(frutas.reverse());
     console.log(frutas);
     
-    //toSorted()
+    //toSorted() -> Mover a High Order Methods, explorar mas conceptos, tira de callbacks
         // igual que sort () pero en este caso no modifica el array original
     // Orden ascendente sin modificación
     console.log(numeros.toSorted((a, b) => a - b));
@@ -195,7 +196,7 @@
         // Retorno: indice | -1
     console.log(frutas.lastIndexOf('Naranja'));
     
-    // find()
+    // find() -> Mover a High Order Methods, explorar mas conceptos, tira de callbacks
         // Devuelve el valor del "primer" elemento del array que cumple la función de prueba proporcionada (condición).
         // Retorno: Primer elemento en cumplir la función | Undefined
         // Tips
@@ -203,22 +204,26 @@
     console.log(notas.find(nota => nota >= 7));
     console.log(notas.find(nota => nota % 2 === 0));
     
-    // findIndex()
+    // findIndex() -> Mover a High Order Methods, explorar mas conceptos, tira de callbacks
         // Devuelve el índice del "primer" elemento de un array que cumpla con la función de prueba proporcionada (condición).
         // Retorno: Índice | -1
     console.log(notas.findIndex(nota => nota % 2 !== 0));
     
-    // some()
+    // some() -> Mover a High Order Methods, explorar mas conceptos, tira de callbacks
     // Verifica si al menos un elemento cumple con una condición en una función de prueba, devolviendo true o false.
 
-    // every() 
+    // every() -> Mover a High Order Methods, explorar mas conceptos, tira de callbacks
     // Verifica si "todos" los elementos cumplen con una condición en una función de prueba. Devuelve true si todos la cumplen y false si al menos uno no la cumple.
     // Retorno: Boolean
     // Tips
     console.log(notas.every(nota => typeof nota === 'number'));
     
 
-    
+
 // Reemplazo
+
+const data = [];
+
+console.log();
 
 // Concatenación

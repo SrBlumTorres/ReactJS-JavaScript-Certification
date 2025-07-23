@@ -1,195 +1,184 @@
-// // // Bucle 1
-// // for (let i = 0; i <= 30; i+=3) {
-// //     const number = i;
-// //     console.log(number);
-// // }
-
-// // // Bucle 2
-// // const tablaMultiplicar = function(userNumber){
-// //   for (let i = 1; i <= 10; i++) {
-// //     const result = userNumber * i;
-// //     console.log(`${userNumber} * ${i} = ${result}`);
-// //   }
-// // };
-
-// // tablaMultiplicar(8);
-
-
-// // // Bucle 3
-// // const parImpar = function (){
-// //     for(let i = 1; i < 21; i++){
-// //         console.log((i % 2 === 0) ? `El: ${i} es par` : `El: ${i} es impar`);
-// //     }
-// // };
-
-// // parImpar();
-
-// // //Bucle 4
-// // const fraseUsuario = function (frase) {
-// //     return frase.split('').filter(letra => letra === 'a').length;
-// // };
-
-// // console.log('La letra A aparece: ' + fraseUsuario('Hola como estas') + ' veces');
-
-// // // const letra = function (frase) {
-// // //     let cont = 0; 
-// // //     for (let caracter of frase) {
-// // //         if (caracter === 'a') { 
-// // //             cont = cont + 1; 
-// // //         }
-// // //     }
-// // //     return cont;
-// // // };
-
-// // // console.log(letra('holaaa'));
-
-// // //Bucle 5
-// // const fibonacci = function (){
-// //     for (let i = 1; i < 51; i++){
-// //         if (i % 3 === 0){
-// //             console.log(`El ${i} es múltiplo de 3`);
-// //         } 
-        
-// //         if (i % 5 === 0) {
-// //             console.log(`El ${i} es múltiplo de 5`);
-// //         }
-        
-// //         if (i % 5 === 0 && i % 3 === 0){
-// //             console.log(`El ${i} es múltiplo de 3 y 5`);
-// //         }
-// //     }
-// // };
-
-// // fibonacci();
-
-// // //Bucle 6
-// // const integerNumber = function(integerNumber_user) {
-// //     // Mientras el número sea menor que 50 o mayor que 100
-// //     while (integerNumber_user < 50 || integerNumber_user > 100) {
-// //         // Solicita de nuevo el número al usuario
-// //         integerNumber_user = prompt('Introduce un número entero (50-100)');
-// //     }
-// //     // Una vez que el número está entre 50 y 100, lo imprimimos
-// //     console.log(integerNumber_user);
-// // };
-// // // Ejecuta la función con un número inicial solicitado al usuario
-// // //integerNumber(prompt('Introduce un número entero (50-100)'));
+const frutas = [
+  {
+    nombre: 'plátano',
+    procedencia: 'Canarias',
+    cantidad: 5,
+    emoticono: '🍌'
+  },
+  {
+    nombre: 'manzana',
+    procedencia: 'Marruecos',
+    cantidad: 2,
+    emoticono: '🍎'
+  },
+  {
+    nombre: 'uvas',
+    procedencia: 'La Rioja',
+    cantidad: 10,
+    emoticono: '🍇'
+  },
+  {
+    nombre: 'aguacate',
+    procedencia: 'Perú',
+    cantidad: 0,
+    emoticono: '🥑'
+  },
+  {
+    nombre: 'pera',
+    procedencia: 'Toledo',
+    cantidad: 7,
+    emoticono: '🍐'
+  },
+  {
+    nombre: 'sandía',
+    procedencia: 'Marruecos',
+    cantidad: 0,
+    emoticono: '🍉'
+  }
+]
 
 
-// // //Bucle 7
-// // const tablaNumero = function (userNumber) {
-// //   while (userNumber < 2 || userNumber > 10) {
-// //       // Solicita de nuevo el número al usuario
-// //       userNumber = prompt('Introduce un número entero (2-10)');
-// //   }
-  
-// //   return tablaMultiplicar(userNumber);
-// // };
+//* Filtra en un array nuevo todas las frutas que tengan más de 5 unidades
+const frutasMayorACinco = frutas.filter(fruta => fruta.cantidad > 5);
+console.log(frutasMayorACinco);
 
-// // //console.log(tablaNumero(prompt('Introduce un número entero (2-10)')));
+//* Filtra todas las frutas que sean de Marruecos
+const frutasMarruecos = frutas.filter(fruta => fruta.procedencia === 'Marruecos');
+console.log(frutasMarruecos);
 
-// // //Bucle 7
-// // const tree = function (){
-// //     let cont = 0;
-// //     let star = '';
-// //     while (cont < 8){
-// //         cont++;
-// //         star += '*';
-// //         console.log(star);
-// //     }
-// // };
+//* Encuentra la fruta que tenga menos de 5 unidades y luego imprime su emoticono en consola
+const frutasMenoresACinco = frutas
+  .filter((fruta) => fruta.cantidad < 5)
+  .map(fruta => fruta.emoticono);
 
-// // tree();
+console.log(frutasMenoresACinco);
 
-// // //Bucle 9
-// // const numbers = [10, -6, 0, -23, -4, 0, -7, 9, -2, 76];
-// // const evalNumbers = numbers.map(function (numbers) {
-// //     if (numbers > 0) {
-// //         console.log(numbers);
-// //     } else if (numbers < 0) {
-// //         console.log(numbers);
-// //     } else {
-// //         console.log(numbers);
-// //     }
-// // });
+//* Encuentra la fruta que venga de Canarias y súmale 2 a su cantidad
+const canariasMasDos = frutas
+  .filter( fruta => fruta.procedencia === 'Canarias')
+  .map( fruta => fruta.cantidad += 2);
+console.log(canariasMasDos);
 
-// # Ejercicios de Funciones, bucles y arrays
-
-// ## Crea una función que llamaremos "range"
-
-//   1. Puede recibir un número, 2 o 3
-//   2. Si le pasamos un número, devolverá un array desde 0 a un número menor del que pasamos
-//   3. Si le pasamos 2 números, devolverá un array desde el primer número hasta uno anterior al segundo
-//   4. El tercer parámetro es opcional y sirve para decir el incremento de un número a otro. POR DEFECTO SERÁ 1
-
-// ```js
-//   range(4) // [0, 1, 2, 3]
-//   range(4, 7) // [4, 5, 6]
-//   range(2, 7, 2) // [2, 4, 6]
-// ```
-
-// ## Crea una función para capitalizar un texto
-// Hay que vigilar que si pasan varios espacios se cuenten como uno
-// Todas Las Palabras Estarán Con La Primera Letra En Mayúscula
+console.log(frutas);
 
 
-// ```js
-// capitalize('hola que tal') // 'Hola Que Tal'
-// capitalize('hola que       tal') // 'Hola Que Tal'
-// ```
 
-// ## Crea una función que recibirá un string, y un separador y te devolverá el mismo string ese separador entre las palabras
+const peliculas = [
+  {
+    titulo: 'El Señor de los Anillos',
+    genero: ['Aventuras', 'Acción'],
+    duracion: 250,
+    year: 2001,
+    director: 'Peter Jackson'
+  },
+  { 
+    titulo: 'Harry Potter', 
+    genero: ['Aventuras', 'Fantasía'], 
+    duracion: 151, 
+    year: 2001 , 
+    director: 'Chris Columbus' 
+  },
+  { 
+    titulo: 'Troya', 
+    genero: ['Histórica', 'Acción'], 
+    duracion: 132, 
+    year: 2004 , 
+    director: 'Wolfgang Petersen' 
+  },
+  { 
+    titulo: 'Iron Man', 
+    genero: ['Ciencia Ficción', 'Acción'], 
+    duracion: 126,
+    year: 2008 , 
+    director: 'Jon Favreau' 
+  },
+  { 
+    titulo: 'E.T.', 
+    genero: ['Aventuras', 'Ciencia Ficción'], 
+    duracion: 115, 
+    year: 1982 , 
+    director: 'Steven Spielberg' 
+  },
+  { 
+    titulo: 'Los Goonies', 
+    genero: ['Aventuras', 'Comedia'], 
+    duracion: 114, 
+    year: 1985 , 
+    director: 'Richard Donner' 
+  },
+  { 
+    titulo: 'Algo Pasa con Mary', 
+    genero: ['Comedia', 'Comedia Romántica'], 
+    duracion: 119, 
+    year: 1998 , 
+    director: 'Bobby Farrelly' 
+  },
+  { 
+    titulo: 'Hook',
+    genero: ['Aventuras', 'Fantasía'], 
+    duracion: 142, 
+    year: 1991 , 
+    director: 'steven Spielberg' 
+  }
+];
 
-// Hay que vigilar que si pasan varios espacios se cuenten como uno
 
-// ```js
-//  textWithSeparator('hola que tal', '-'); // 'hola-que-tal'
-//  textWithSeparator('hola que       tal', '-'); // 'hola-que-tal'
 
-// ```
+//* 1.- Vamos a imprimir todas los títulos de las películas con un número delante. 
+// Push de la posición en la que estés más 1
+// const titulos = [...peliculas].map(addPositionCallback(peliculas));
 
-// function range(paramNumber_1, paramNumber_2 = null, paramOptional = 1) {
-//     const result = [];
 
-//     // Si solo se pasa un parámetro, se asume que es el fin del rango y empieza desde 0.
-//     if (paramNumber_2 === null) {
-//         for (let i = 0; i <= paramNumber_1; i += paramOptional) {
-//             result.push(i);
-//         }
-//     } else {
-//         // Si se pasan dos parámetros, genera el rango desde paramNumber_1 hasta paramNumber_2
-//         for (let i = paramNumber_1; i <= paramNumber_2; i += paramOptional) {
-//             result.push(i);
-//         }
-//     }
-
-//     return result;
+// function addPositionCallback(currentValue, index, array){
+//   return array.push(currentValue, currentValue.position = index + 1);
 // }
 
-// console.log(range(45, 65, 3));
+/*javascript
+// 1.- El Señor de los Anillos
+// 2.- Harry Potter
+// ...
+*/
 
 
-// Ejercicio 1: Manipulación de Strings
-// Escribe una función llamada formatearTexto que reciba una cadena de texto y la devuelva en formato "Título". Esto significa que la primera letra de cada palabra debe estar en mayúsculas y las demás en minúsculas.
+//* 2.- Filtra todas las películas que sean más modernas que el año 2000 y imprime el array por consola
+const peliculasModernas = peliculas.filter((pelicula) => pelicula.year > 2000);
+console.log(peliculasModernas);
 
-// js
-// Copiar código
-function formatearTexto(texto) {
-    //Separamos la frase por espacios
-    const splitText = texto.split(' ');
-    const formatedText = [];
+//* 3.- Filtra las películas por genero 'Fantasía'
+const peliculasFantasia = peliculas.filter((pelicula) => pelicula.genero.includes('Fantasía'));
+console.log(peliculasFantasia);
 
-    for (const element of splitText) {
-        console.log(34);
-        console.log(element[0]);
-    }
 
-    return formatedText;
-    // const textFormated = [];
-    // textFormated
-    // return textFormated.length;
-  // Tu código aquí
+//* 4.- Vamos a ENCONTRAR una película de 'Wolfgang Petersen' y guardarla en una variable
+const directorWolfPetersen = peliculas.filter((pelicula) => pelicula.director === 'Wolfgang Petersen');
+console.log(directorWolfPetersen);
+
+
+//* 5.- Vamos a MODIFICAR cada duración de las películas y sumarle a todas 100 minutos
+const duracion = [...peliculas].map(sumar);
+console.log(duracion);
+
+function sumar(pelicula){
+  pelicula.duracion += 100;
+  return pelicula;
 }
 
-console.log(formatearTexto("Hola, como estás?")); 
-// Salida esperada: "Aprendiendo Javascript Es Divertido"
+//* 6.- Vamos a AÑADIR a todas las películas la propiedad `rating` que empezará con el valor 5 excepto 'Hook' que tendrá un 10
+
+
+//* 7.- Crea un array con todos los nombres de los directores en MAYUSCULAS (solo los nombres)
+
+//* 8.- Crea un array con solo los años de las películas (solo los números) y luego adivina cuál es la película más antigua y la más moderna (RECUERDA EL OBJETO MATH)
+
+//* 9.- Ordena las películas de más antíguas a más modernas
+
+//* 10.- Ordena las películas por el nombre del director de forma alfabética A-Z
+const peliculasOrdenadas = [...peliculas].sort((peliA, peliB) => {
+  if (peliA < peliB ) return 
+});
+
+//* 11.- ¿Hay alguna película que Terror en el array? Demuéstralo.
+
+
+
+//* 12.- ¿Duran TODAS las películas más de 2 horas?
