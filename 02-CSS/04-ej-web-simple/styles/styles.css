@@ -1,0 +1,123 @@
+:root {
+  /* Variables */
+  --white: hsl(0, 0%, 100%);
+  --stone-100: hsl(30, 54%, 90%);
+  --stone-150: hsl(30, 18%, 87%);
+  --stone-600: hwb(32 31% 63%);
+  --stone-900: hsl(24, 5%, 18%);
+  --brown-800: hsl(14, 45%, 36%);
+  --rose-800: hsl(332, 51%, 32%);
+  --rose-50: hsl(330, 100%, 98%);
+
+  --stone-100-hue: 30;
+  --stone-100-saturation: 54%;
+  --stone-100-luminosity: 90%;
+
+  --stone-100-hsl: 30, 54%, 90%;
+  --stone-100-opacity: 0.5;
+
+  --heading-font: 'Young Serif', serif;
+  --body-font: 'Outfit', sans-serif;
+}
+
+body {
+  font-family: var(--body-font);
+  background-color: hsl(var(--stone-100));
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--heading-font)
+}
+
+div.separator {
+  height: 2px;
+  background-color: var(--stone-150);
+  margin: 15px 0px;
+}
+
+main div.wrapper {
+  padding: 30px;
+}
+
+.introduction__title {
+  font-size: 35px;
+  line-height: 1;
+  color: var(--stone-900);
+}
+
+.introduction__text {
+  line-height: 1.5;
+  /* Espacio entre líneas */
+  font-size: 17px;
+  color: var(--stone-600);
+}
+
+.preparation {
+  background-color: var(--rose-50);
+  border-radius: 10px;
+  padding: 10px 25px;
+  margin: 30px 0px;
+  color: var(--stone-600);
+}
+
+.preparation__title {
+  color: var(--rose-800);
+}
+
+.preparation__list li::marker {
+  line-height: 2;
+  color: var(--rose-800);
+}
+
+.preparation b {
+  color: var(--stone-600);
+}
+
+.ingredients__title, 
+.instructions__title,
+.nutrition__title
+{
+  color: var(--brown-800);
+  font-size: 28px;
+}
+
+.ingredients__list {
+  color: var(--stone-600);
+  line-height: 2;
+}
+
+.ingredients__list > li {
+  padding-left: 15px;
+}
+
+li.instructions__list__item {
+  color: var(--stone-600);
+  margin-bottom: 15px;
+  padding-left: 15px;
+  line-height: 1.5;
+}
+
+li.instructions__list__item::marker{
+  color: var(--brown-800);
+  font-weight: 700;
+}
+
+.nutrition__text {
+  color: var(--stone-600);
+  line-height: 1.5;
+}
+
+.nutrition__info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nutrition__macros__info {
+  color: var(--stone-600);
+}
+
+.nutrition__macros__values {
+  color: var(--brown-800);
+}
+
+  

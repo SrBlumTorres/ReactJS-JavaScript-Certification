@@ -1,120 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   <link rel="stylesheet" href="./styles/reset.css">
   <link rel="stylesheet" href="./styles/fonts.css">
-  <link rel="stylesheet" href="./styles/style.css">
-  <title>Frontend Mentor | Recipe page</title>
-
+  <link rel="stylesheet" href="./styles/styles.css">
+  <title>UI Example</title>
 </head>
-
 <body>
+  <main>
+    <img src="./assets/images/image-omelette.jpeg" alt="Omelette" srcset="">
 
-  <main class="container">
-    <img src="./assets/images/image-omelette.jpeg" alt="Foto de una omelette">
-    
-    
-    <div class="padding-wrapper">
-      
-      <section class="introduction">
+    <div class="wrapper">
+
+     <section class="introduction">
         <h1 class="introduction__title">Simple Omelette Recipe</h1>
         <p class="introduction__text">An easy and quick dish, perfect for any meal. This classic omelette combines beaten
           eggs cooked to perfection, optionally filled with your choice of cheese, vegetables, or meats.</p>
       </section>
 
-
       <section class="preparation">
-        <h2 class="section-title">Preparation time</h2>
+        <h3 class="preparation__title">Preparation time</h3>
         <ul class="preparation__list">
-          <li class="preparation__info">
-            <h3 class="preparation-info__title">Total</h3>: Approximately 10 minutes
-          </li>
-          <li>
-            <h3 class="preparation-info__title">Preparation</h3>: 5 minutes
-          </li>
-          <li>
-            <h3 class="preparation-info__title">Cooking</h3>: 5 minutes
-          </li>
+          <li><b>Total</b>: Approximately 10 minutes</li>
+          <li><b>Preparation</b>: 5 minutes</li>
+          <li><b>Cooking</b>: 5 minutes</li>
         </ul>
       </section>
-
 
       <section class="ingredients">
-        <h2 class="section-title">Ingredients</h2>
+        <h2 class="ingredients__title">Ingredients</h2>
         <ul class="ingredients__list">
-          <li class="ingredients__item">2-3 large eggs</li>
-          <li class="ingredients__item">Salt, to taste</li>
-          <li class="ingredients__item">Pepper, to taste</li>
-          <li class="ingredients__item">1 tablespoon of butter or oil</li>
-          <li class="ingredients__item">Optional fillings: cheese, diced vegetables, cooked meats, herbs</li>
+          <li>2-3 large eggs</li>
+          <li>Salt, to taste</li>
+          <li>Pepper, to taste</li>
+          <li>1 tablespoon of butter or oil</li>
+          <li>Optional fillings: cheese, diced vegetables, cooked meats, herbs</li>
         </ul>
       </section>
 
+      <div class="separator"></div>
 
       <section class="instructions">
-        <h2 class="section-title">Instructions</h2>
-        <ol>
-          <li class="instructions__info">
-            <h3 class="instructions-info__title">Beat the eggs</h3>: In a bowl, beat the eggs with a pinch of salt and pepper until they are well mixed. You
+        <h2 class="instructions__title">Instructions</h2>
+
+        <ol class="instruction__list">
+          <li class="instructions__list__item">
+            <b>Beat the eggs</b>: In a bowl, beat the eggs with a pinch of salt and pepper until they are well mixed. You
             can add a tablespoon of water or milk for a fluffier texture.
           </li>
-          <li class="instructions__info">
-            <h3 class="instructions-info__title">Heat the pan</h3>: Place a non-stick frying pan over medium heat and add butter or oil.
+          <li class="instructions__list__item">
+            <b>Heat the pan</b>: Place a non-stick frying pan over medium heat and add butter or oil.
           </li>
-          <li class="instructions__info">
-            <h3 class="instructions-info__title">Cook the omelette</h3>: Once the butter is melted and bubbling, pour in the eggs. Tilt the pan to ensure the
+          <li class="instructions__list__item">
+            <b>Cook the omelette</b>: Once the butter is melted and bubbling, pour in the eggs. Tilt the pan to ensure the
             eggs evenly coat the surface.
           </li>
-          <li class="instructions__info">
-            <h3 class="instructions-info__title">Add fillings (optional)</h3>: When the eggs begin to set at the edges but are still slightly runny in the
+          <li class="instructions__list__item">
+            <b>Add fillings (optional)</b>: When the eggs begin to set at the edges but are still slightly runny in the
             middle, sprinkle your chosen fillings over one half of the omelette.
           </li>
-          <li class="instructions__info">
-            <h3 class="instructions-info__title">Fold and serve</h3>: As the omelette continues to cook, carefully lift one edge and fold it over the
+          <li class="instructions__list__item">
+            <b>Fold and serve</b>: As the omelette continues to cook, carefully lift one edge and fold it over the
             fillings.
             Let it cook for another minute, then slide it onto a plate.
           </li>
-          <li class="instructions__info">
-            <h3 class="instructions-info__title">Enjoy</h3>: Serve hot, with additional salt and pepper if needed.
+          <li class="instructions__list__item">
+            <b>Enjoy</b>: Serve hot, with additional salt and pepper if needed.
           </li>
         </ol>
       </section>
 
+      <section class="nutrition">
+        <h3 class="nutrition__title">Nutrition</h3>
+        <p class="nutrition__text">The table below shows nutritional values per serving without the additional fillings.</p>
 
-      <div class="separator"></div>
-      <section>
-        <h2 class="section-title">Nutrition</h2>
-        <p>The table below shows nutritional values per serving without the additional fillings.</p>
-        
-        <span class="nutrients">Calories</span>
-        <span class="nutrients_data">277kcal</span>
-        
+        <div class="nutrition__info">
+          <span class="nutrition__macros__info">Calories</span>
+          <span class="nutrition__macros__values">277kcal</span>
+        </div>
         <div class="separator"></div>
-        
-        <span class="nutrients">Carbs</span>
-        <span class="nutrients_data">0g</span>
-        
-        <div class="separator"></div>
-        
-        <span class="nutrients">Protein</span>
-        <span class="nutrients_data">20g</span>
-        
-        <div class="separator"></div>
-        
-        <span class="nutrients">Fat</span>
-        <span class="nutrients_data">22g</span>
 
+        <div class="nutrition__info">
+          <span class="nutrition__macros__info">Carbs</span>
+          <span class="nutrition__macros__values">0g</span>
+        </div>
+        <div class="separator"></div>
+
+        <div class="nutrition__info">
+          <span class="nutrition__macros__info">Protein</span>
+          <span class="nutrition__macros__values">20g</span>
+        </div>
+        <div class="separator"></div>
+        
+        <div class="nutrition__info">
+          <span class="nutrition__macros__info">Fat</span>
+          <span class="nutrition__macros__values">22g</span>
+        </div>
       </section>
-    </div>
   </main>
-
-
 </body>
-
 </html>
