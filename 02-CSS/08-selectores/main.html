@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-            /* Ej 1:
+      /* Ej 1:
                     a) Pinta .title (h1) y todos los h2, h3 con un color distinto — usa un único selector agrupado.
 
                     b) Selecciona solo los a dentro de .main-nav y ponles padding.
@@ -17,45 +17,45 @@
                     e) Selecciona los li posteriores al primer li usando :not(:first-child) o li + li y dales un padding-left.
                    */
 
-            summary {
-              font-size: 1.5rem;
-            }
+      summary {
+        font-size: 1.5rem;
+      }
 
-            summary::marker {
-              content: "➡️";
-            }
+      summary::marker {
+        content: "➡️";
+      }
 
-            details[open] > summary::marker {
-              content: "👇";
-            }
+      details[open] > summary::marker {
+        content: "👇";
+      }
 
-            /* a)  */
-            .title,
-            h2,
-            h3 {
-              color: hsl(210 90% 35%);
-            }
+      /* a)  */
+      .title,
+      h2,
+      h3 {
+        color: hsl(210 90% 35%);
+      }
 
-            /* b) */
-            .main-nav a {
-              padding: 1rem;
-            }
+      /* b) */
+      .main-nav a {
+        padding: 1rem;
+      }
 
-            /* c) */
-            .post > .lead {
-              opacity: 50%;
-            }
+      /* c) */
+      .post > .lead {
+        opacity: 50%;
+      }
 
-            /* d) */
-            .author + .date {
-              margin: 1.5rem;
-            }
+      /* d) */
+      .author + .date {
+        margin: 1.5rem;
+      }
 
-            .ingredients li:not(:first-child) {
-              padding-left: 1rem;
-            }
+      .ingredients li:not(:first-child) {
+        padding-left: 1rem;
+      }
 
-            /* Ej: 2
+      /* Ej: 2
 
               a) Estila input[type="email"] distinto (bordes/padding).
 
@@ -67,32 +67,32 @@
 
             */
 
-            /* a)  */
-            input[type="email"] {
-              border: 2px solid royalblue;
-              padding: 0.5rem;
-            }
+      /* a)  */
+      input[type="email"] {
+        border: 2px solid royalblue;
+        padding: 0.5rem;
+      }
 
-            /* b) */
-            button[data-variant="primary"] {
-              background-color: royalblue;
-              color: white;
-            }
+      /* b) */
+      button[data-variant="primary"] {
+        background-color: royalblue;
+        color: white;
+      }
 
-            /*  c) */
-            a[href^="http"]::after {
-              content: "🔗";
-            }
+      /*  c) */
+      a[href^="http"]::after {
+        content: "🔗";
+      }
 
-            /* d) */
-            input[placeholder="Nombre"] {
-              background-image: linear-gradient(
-                rgb(115, 136, 198),
-                rgb(226, 144, 161)
-              );
-            }
+      /* d) */
+      input[placeholder="Nombre"] {
+        background-image: linear-gradient(
+          rgb(115, 136, 198),
+          rgb(226, 144, 161)
+        );
+      }
 
-            /* Ejercicio 3
+      /* Ejercicio 3
 
              a) En .menu a:hover cambia color y subraya.
 
@@ -104,55 +104,139 @@
 
             */
 
-            /* a) */
-            .menu a:hover {
-              color: olivedrab;
-              font-size: 1.5rem;
-              text-decoration: line-through;
-            }
+      /* a) */
+      .menu a:hover {
+        color: olivedrab;
+        font-size: 1.5rem;
+        text-decoration: line-through;
+      }
 
-            /* b) */
-            /* Impares */
-            .cards .card:nth-child(odd) {
-              background-color: rgb(211, 252, 209);
-              border: 2px solid olivedrab;
-              padding: 0.5rem;
-              margin-block: 0.5rem;
-            }
+      /* b) */
+      /* Impares */
+      .cards .card:nth-child(odd) {
+        background-color: rgb(211, 252, 209);
+        border: 2px solid olivedrab;
+        padding: 0.5rem;
+        margin-block: 0.5rem;
+      }
 
-            /* Pares */
-            .cards .card:nth-child(even) {
-              background-color: rgb(132, 204, 210);
-              border: 2px solid olivedrab;
-              padding: 0.5rem;
-              margin-block: 0.5rem;
-            }
-            
-            /* .card:last-child {
+      /* Pares */
+      .cards .card:nth-child(even) {
+        background-color: rgb(132, 204, 210);
+        border: 2px solid olivedrab;
+        padding: 0.5rem;
+        margin-block: 0.5rem;
+      }
+
+      /* .card:last-child {
               margin-bottom: 0.5rem;
             } */
 
-            /* c) Afecta a todos menos al primero */
-            .cards .card:not(:first-child){
-              margin-left: 1rem;
-            }
+      /* c) Afecta a todos menos al primero */
+      .cards .card:not(:first-child) {
+        margin-left: 1rem;
+      }
 
-            /* d)  */
-            button:disabled {
-              opacity:.5;
+      /* d)  */
+      button:disabled {
+        opacity: 0.5;
 
-              &:hover {
-                transition: all 300ms ease;
-                transform: scale(1.5);
-                margin-left: 2rem;
-                width: 20%;
-              }
+        &:hover {
+          transition: all 300ms ease;
+          transform: scale(1.5);
+          margin-left: 2rem;
+          width: 20%;
+        }
+      }
 
-            }
+      /* Ejercicio 4
+        a) Añade un pequeño icono → delante del button usando .card__cta::before.
+        b) Reemplaza las viñetas de .fancy-list con un punto verde usando li::marker o li::before.
+        c) Crea un “ribbon” (cinta) en la esquina superior derecha de .card usando .card::after con position:absolute. 
+      */
+
+      /* a) */
+      .card__cta::before {
+        content: "-->";
+      }
+
+      /* b) */
+      .fancy-list li::marker {
+        content: "";
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        background: #2ecc71;
+        border-radius: 50%;
+        margin-right: 0.6rem;
+        transform: translateY(0.1rem);
+      }
+
+      article.card::after {
+        /* ribbon */
+        content: "TOP";
+        position: absolute;
+        right: 20px;
+        top: 30px;
+        background: #ff6b6b;
+        color: white;
+        padding: 0.5rem 1rem;
+        transform: rotate(30deg);
+        font-size: 0.75rem;
+        border-radius: 2px;
+      }
+
+      /* Ejercicio 5
+        a) Estila input::placeholder (color y opacidad más baja).
+        b) Cambia ::selection para que el texto resaltado tenga fondo amarillo y texto negro.
+        c) Modifica li::marker para que las viñetas sean grandes y de color. 
+      */
+
+      /* a) */
+      input.search::placeholder {
+        color: rgb(115, 136, 198);
+        opacity: 0.5;
+      }
+
+      /* b) */
+      ::selection {
+        background: #ffea88;
+        color: #10fffb;
+      }
+
+      /* c) */
+      p + ul li::marker {
+        content: "🚀";
+        font-size: 1.5rem;
+      }
+
+      /* Ejercicio 6
+        a) Oculta .acc__panel por defecto.
+
+        b) Cuando #acc-1:checked está activo, muestra .acc__panel (#acc-1:checked ~ .acc__panel { max-height: 400px; }).
+
+        c) Añade un ::after en .acc__label que cambie de + a – cuando el checkbox esté :checked
+      */
+
+      /* a) */
+      .acc__panel {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease;
+      }
+
+      /* b) */
+      /* Cuando el checkbox está marcado, expando el panel */
+      #acc-1:checked ~ .acc__panel {
+        max-height: 200px; /* o el valor que quieras */
+      }
+
+      #acc-1:checked + .acc__label::after {
+        content: "–";
+      }
     </style>
   </head>
   <body>
-    <!-- html-ej1.html -->
     <main>
       <details>
         <summary>Ejercicio 1</summary>
@@ -186,7 +270,7 @@
       </details>
 
       <details>
-        <summary>Ejercicio 2 formulario</summary>
+        <summary>Ejercicio 2</summary>
         <!-- html-ej2.html -->
         <form class="signup">
           <input type="text" name="name" placeholder="Nombre" />
@@ -224,6 +308,49 @@
           <input placeholder="buscar..." />
           <button disabled>Enviar</button>
         </form>
+      </details>
+
+      <details>
+        <summary>Ejercicio 4</summary>
+        <article class="card">
+          <h2 class="card__title">Simple Omelette</h2>
+          <p class="card__desc">Rápido, sabroso y esponjoso.</p>
+          <button class="card__cta">Leer receta</button>
+        </article>
+
+        <ul class="fancy-list">
+          <li>Huevos</li>
+          <li>Queso</li>
+          <li>Hierbas</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Ejercicio 5</summary>
+
+        <!-- html-ej5.html -->
+        <input class="search" placeholder="Busca una receta..." />
+        <p>Selecciona este texto y fíjate en ::selection</p>
+
+        <ul>
+          <li>Paso 1</li>
+          <li>Paso 2</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Ejercicio 6</summary>
+        <section class="accordion">
+          <input type="checkbox" id="acc-1" class="acc__input" />
+          <label for="acc-1" class="acc__label">Mostrar ingredientes</label>
+          <div class="acc__panel">
+            <ul>
+              <li>2 huevos</li>
+              <li>1 cuch. mantequilla</li>
+              <li>Sal</li>
+            </ul>
+          </div>
+        </section>
       </details>
     </main>
   </body>
