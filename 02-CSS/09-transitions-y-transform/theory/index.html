@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <title>CSS Puro: Transition, Transform y Filter</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>CSS Puro: Los Tres Pilares</h1>
+      <p class="subtitle">Transition • Transform • Filter</p>
+
+      <!-- SECTION 1: TRANSITION -->
+      <div class="section">
+        <h2>1. TRANSITION - El Arte del Cambio Gradual</h2>
+        <div class="concept-explanation">
+          <strong>Concepto:</strong> Transition controla cómo una propiedad CSS
+          cambia de un valor a otro. Sin transition, los cambios son
+          instantáneos. Con transition, se vuelven suaves y elegantes, creando
+          la ilusión de movimiento.
+        </div>
+
+        <div class="transition-demos">
+          <div class="transition-card">
+            <div>Hover Normal</div>
+            <div class="demo-label">0.4s ease-in-out</div>
+          </div>
+          <div class="transition-card transition-slow">
+            <div>Hover Lento</div>
+            <div class="demo-label">2s ease-out</div>
+          </div>
+          <div class="transition-card transition-fast">
+            <div>Hover Rápido</div>
+            <div class="demo-label">0.1s linear</div>
+          </div>
+          <div class="transition-card transition-elastic">
+            <div>Hover Elástico</div>
+            <div class="demo-label">0.8s cubic-bezier</div>
+          </div>
+        </div>
+
+        <div class="code-display">
+          <pre>
+            /* Syntax básica de transition */ .elemento { transition: property
+            duration timing-function delay; /* O más específico */ transition: all
+            0.4s ease-in-out 0s; transition: transform 0.3s ease, opacity 0.5s
+            linear; } /* Timing functions más comunes */ ease-in-out /* Lento al
+            inicio y final, rápido en el medio */ ease /* Lento al inicio, acelera
+            después */ linear /* Velocidad constante */ cubic-bezier() /* Control
+            total sobre la curva */
+          </pre>
+        </div>
+
+        <div class="tip-box">
+          <strong>Clave de aprendizaje:</strong> Transition es como un director
+          de orquesta que coordina cómo cambian las propiedades. Especifica qué
+          propiedades animar (all, transform, opacity), cuánto tiempo tomar, y
+          qué tipo de aceleración usar.
+        </div>
+      </div>
+
+      <!-- SECTION 2: TRANSFORM -->
+      <div class="section">
+        <h2>2. TRANSFORM - Manipulación Visual sin Impacto en Layout</h2>
+        <div class="concept-explanation">
+          <strong>Concepto:</strong> Transform modifica la apariencia visual de
+          un elemento (rotación, escala, posición) sin afectar el flujo del
+          documento. Es como mover una fotografía sobre una mesa - la foto
+          cambia de posición pero no empuja otros objetos.
+        </div>
+
+        <p style="margin-bottom: 15px">
+          <strong>Sin transition (cambio instantáneo):</strong>
+        </p>
+        <div class="transform-gallery">
+          <div class="transform-item rotate">
+            <div>Rotate<br /><span style="font-size: 0.8em">45deg</span></div>
+          </div>
+          <div class="transform-item scale">
+            <div>Scale<br /><span style="font-size: 0.8em">1.3x</span></div>
+          </div>
+          <div class="transform-item translate">
+            <div>
+              Translate<br /><span style="font-size: 0.8em">30px, -15px</span>
+            </div>
+          </div>
+          <div class="transform-item skew">
+            <div>
+              Skew<br /><span style="font-size: 0.8em">15deg, 5deg</span>
+            </div>
+          </div>
+        </div>
+
+        <p style="margin-bottom: 15px">
+          <strong>Con transition (cambio suave):</strong>
+        </p>
+        <div class="transform-gallery">
+          <div class="transform-item rotate smooth">
+            <div>Rotate<br /><span style="font-size: 0.8em">Smooth</span></div>
+          </div>
+          <div class="transform-item scale smooth">
+            <div>Scale<br /><span style="font-size: 0.8em">Smooth</span></div>
+          </div>
+          <div class="transform-item flip smooth">
+            <div>Flip Y<br /><span style="font-size: 0.8em">180deg</span></div>
+          </div>
+          <div class="transform-item combine smooth">
+            <div>Combined<br /><span style="font-size: 0.8em">Multi</span></div>
+          </div>
+        </div>
+
+        <div class="code-display">
+          <pre>
+            /* Transform functions principales */ transform: rotate(45deg); /*
+            Rotación */ transform: scale(1.5); /* Escala uniforme */ transform:
+            scaleX(2) scaleY(0.5); /* Escala por eje */ transform: translate(50px,
+            100px); /* Mover en X, Y */ transform: translateX(30px); /* Solo en X
+            */ transform: skew(15deg, 5deg); /* Sesgar */ /* Combinando múltiples
+            transforms */ transform: rotate(20deg) scale(1.2) translateY(-20px);
+            /* 3D transforms */ transform: rotateY(180deg); /* Flip horizontal */
+            transform: perspective(1000px) rotateX(45deg); /* 3D rotation */
+          </pre>
+        </div>
+
+        <div class="tip-box">
+          <strong>Clave de aprendizaje:</strong> Transform es como un mago que
+          cambia la apariencia sin alterar la realidad subyacente. El elemento
+          mantiene su espacio original en el layout, pero visualmente aparece
+          transformado. Puedes combinar múltiples transformaciones en una sola
+          declaración.
+        </div>
+      </div>
+
+      <!-- SECTION 3: FILTER -->
+      <div class="section">
+        <h2>3. FILTER - Efectos Visuales Profesionales</h2>
+        <div class="concept-explanation">
+          <strong>Concepto:</strong> Filter aplica efectos de procesamiento de
+          imagen directamente en CSS. Es como tener Photoshop integrado en tu
+          hoja de estilos, permitiendo blur, cambios de color, brillo y otros
+          efectos visuales sofisticados.
+        </div>
+
+        <p style="margin-bottom: 15px">
+          <strong>Filtros individuales:</strong>
+        </p>
+        <div class="filter-showcase">
+          <div class="filter-demo blur">
+            <div class="demo-label">Blur</div>
+          </div>
+          <div class="filter-demo brightness">
+            <div class="demo-label">Brightness</div>
+          </div>
+          <div class="filter-demo contrast">
+            <div class="demo-label">Contrast</div>
+          </div>
+          <div class="filter-demo grayscale">
+            <div class="demo-label">Grayscale</div>
+          </div>
+          <div class="filter-demo hue-rotate">
+            <div class="demo-label">Hue Rotate</div>
+          </div>
+          <div class="filter-demo saturate">
+            <div class="demo-label">Saturate</div>
+          </div>
+          <div class="filter-demo sepia">
+            <div class="demo-label">Sepia</div>
+          </div>
+          <div class="filter-demo invert">
+            <div class="demo-label">Invert</div>
+          </div>
+        </div>
+
+        <p style="margin-bottom: 15px">
+          <strong>Combinaciones tipo Instagram:</strong>
+        </p>
+        <div class="filter-showcase">
+          <div class="filter-demo instagram">
+            <div class="demo-label">Instagram</div>
+          </div>
+          <div class="filter-demo vintage">
+            <div class="demo-label">Vintage</div>
+          </div>
+          <div class="filter-demo dramatic">
+            <div class="demo-label">Dramatic</div>
+          </div>
+        </div>
+
+        <div class="code-display">
+          <pre>
+            /* Filter functions principales */ filter: blur(4px); /* Desenfoque */
+            filter: brightness(1.5); /* 1 = normal, >1 más brillo */ filter:
+            contrast(2); /* 1 = normal, >1 más contraste */ filter:
+            grayscale(100%); /* 0% color, 100% gris */ filter: hue-rotate(180deg);
+            /* Rota los colores */ filter: saturate(2); /* 1 = normal, >1 más
+            saturado */ filter: sepia(80%); /* Efecto sepia vintage */ filter:
+            invert(100%); /* Invierte colores */ /* Combinando múltiples filtros
+            */ filter: brightness(1.2) contrast(1.3) saturate(1.5); filter:
+            sepia(0.8) contrast(1.2) brightness(1.1) hue-rotate(15deg);
+          </pre>
+        </div>
+
+        <div class="tip-box">
+          <strong>Clave de aprendizaje:</strong> Los filtros se procesan en el
+          orden que los escribes y se pueden combinar para crear efectos
+          complejos. Son especialmente poderosos para crear efectos de hover,
+          estados de loading, o temas diferentes en tu aplicación.
+        </div>
+      </div>
+
+      <!-- SECTION 4: COMBINATION MASTERY -->
+      <div class="section">
+        <h2>4. LA SINFONÍA COMPLETA - Combinando los Tres</h2>
+        <div class="concept-explanation">
+          <strong>El Poder Real:</strong> Cuando combines transition, transform
+          y filter, puedes crear experiencias visuales que rivalizan con
+          aplicaciones nativas. Cada propiedad cumple un role: transition
+          coordina, transform mueve, filter embellece.
+        </div>
+
+        <div class="advanced-demo">
+          <div class="masterpiece">
+            <div>
+              La Obra Maestra<br /><span style="font-size: 0.8em"
+                >Hover para magia</span
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="code-display">
+          <pre>
+            /* La combinación perfecta */ .masterpiece { /* Fondo animado con
+            keyframes */ background: linear-gradient(45deg, #ff6b6b, #4ecdc4,
+            #45b7d1, #96ceb4); background-size: 400% 400%; animation:
+            gradientShift 3s ease infinite; /* Transition coordina todos los
+            cambios */ transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            } .masterpiece:hover { /* Transform cambia la forma y posición */
+            transform: rotate(10deg) scale(1.15) translateY(-15px); /* Filter
+            añade efectos visuales */ filter: brightness(1.3) saturate(1.5)
+            hue-rotate(45deg) contrast(1.2); /* Sombra tradicional para
+            profundidad */ box-shadow: 0 25px 50px rgba(0,0,0,0.4); } @keyframes
+            gradientShift { 0% { background-position: 0% 50%; } 50% {
+            background-position: 100% 50%; } 100% { background-position: 0% 50%; }
+            }
+          </pre>
+        </div>
+
+        <div class="tip-box">
+          <strong>Mastery tip:</strong> Esta combinación demuestra cómo cada
+          propiedad tiene su papel único pero trabajan juntas. Transition hace
+          que todo fluya suavemente, transform crea movimiento físico, filter
+          añade efectos visuales, y keyframes proporcionan animación continua.
+          El resultado es una experiencia que se siente viva y profesional.
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
